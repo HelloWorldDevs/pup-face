@@ -117,6 +117,7 @@
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.2.tgz",
       "version": "7.1.2"
     },
+    "googleapis": "^32.0.0",
     "https-proxy-agent": {
       "integrity": "sha512-/DTVSUCbRc6AiyOV4DBRvPDpKKCJh4qQJNaCgypX0T41quD9hp/PB5iUyx/60XobuMPQa9ce1jNV9UOUq6PnTg==",
       "requires": {
@@ -210,6 +211,7 @@
       "version": "1.0.0"
     },
     "puppeteer": "^1.4.0",
+    "q": "^1.5.1",
     "readable-stream": {
       "integrity": "sha512-m+qzzcn7KUxEmd1gMbchF+Y2eIUbieUaxkWtptyHywrX0rE8QEYqPC07Vuy4Wm32/xE16NcdBctb8S0Xe/5IeQ==",
       "requires": {
