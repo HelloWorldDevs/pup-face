@@ -1,12 +1,14 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
+const makeRow = require('./makeRow');
 
 // If modifying these scopes, delete credentials.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 const TOKEN_PATH = 'credentials.json';
 
-let client_secret = require('./../client_secret.json');
+const client_secret = require('./../client_secret.json');
+const CRED = require('./../creds.js');
 
 async function authorize(credentials, callback) {
   const {client_secret, client_id, redirect_uris} = credentials.installed;
@@ -53,7 +55,7 @@ let getKeywords = async () => {
     authorize(client_secret, (auth) => {
       const sheets = google.sheets({ version: 'v4', auth });
       sheets.spreadsheets.values.get({
-        spreadsheetId: '11IUhEEecKbFjmbNse2w9JCHZa7CdVyq6R8oZ2jdUcOU',
+        spreadsheetId: CRED.keywordSheetId,
         range: 'B2:B100',
       }, (err, { data }) => {
         if (err) return console.log('The API returned an error: ' + err);
@@ -73,4 +75,36 @@ let getKeywords = async () => {
 };
 
 
-module.exports = getKeywords;
+
+let saveResults = async (data) => {
+  return new Promise((resolve, reject) => {
+    // Authorize a client with credentials, then call the Google Sheets API.
+    if(data) {
+      authorize(client_secret, (auth) => {
+        const sheets = google.sheets({ version: 'v4', auth });
+        console.log('saving data to sheets');
+        sheets.spreadsheets.values.append({
+          spreadsheetId: CRED.writeSheetId,
+          range: 'Sheet1',
+          valueInputOption: 'RAW',
+          insertDataOption: 'INSERT_ROWS',
+          resource: {
+            values: data.map(makeRow),
+          },
+          auth: auth
+        }, (err, response) => {
+          if (err) return console.error(err);
+          console.log(data.length + ' Lines saved');
+          return resolve(response);
+        })
+      });
+    }
+
+  });
+};
+
+
+module.exports = {
+  getKeywords: getKeywords,
+  saveResults: saveResults
+};

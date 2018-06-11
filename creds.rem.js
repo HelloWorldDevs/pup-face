@@ -1,4 +1,6 @@
 module.exports = {
   user: "",
-  pass: ""
+  pass: "",
+  keywordSheetId: "",
+  writeSheetId: ""
 };
