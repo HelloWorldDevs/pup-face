@@ -15,7 +15,7 @@ const autoScroll = require('./utils/autoScroll');
   });
   // TODO: turn back on keyword loading to get all results in production
   const keywords = await getKeywords();
-  // const keywords = ['dialysis'];
+  // const keywords = ['Doug Robinson'];
   let page = await browser.newPage();
   page = await login(page);
 
@@ -38,7 +38,7 @@ const autoScroll = require('./utils/autoScroll');
     // only needed if >= 30 results
     // console.log('Scrolling to load all results');
     // TODO: turn back on autoScroll to get all results in production
-    // await autoScroll(page);
+    await autoScroll(page);
 
     console.log('Scrolling complete. Scraping keyword: ' + currentKeyword);
     let results = await page.$$eval('a', (anchors, currentKeyword) => {
@@ -54,28 +54,42 @@ const autoScroll = require('./utils/autoScroll');
             results[current].click();
             // queries
             let modal = '.uiLayer > div:nth-child(2) > div button + div + div > div > div';
-            let leftColumn = `${modal} > div:nth-child(1)`;
-            let rightColumn = `${modal} > div:nth-child(2)`;
-            let mainTitleBox = `${leftColumn} > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div`;
 
-            let pageName = document.querySelector(`${mainTitleBox} > span > a`);
-            // sponsor may be empty
-            let sponsor = document.querySelector(`${mainTitleBox} > div:nth-child(2) > div > div span:nth-child(2) > span`);
-            let impressions = document.querySelector(`${rightColumn} > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)`);
-            let spending = document.querySelector(`${rightColumn} > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)`);
+            // Left Column
+            let leftColumnQuery = `${modal} > div:nth-child(1)`;
+            let mainTitleBoxQuery = `${leftColumnQuery} > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div`;
+
+            let pageName = document.querySelector(`${mainTitleBoxQuery} > span > a`);
+            let sponsor = document.querySelector(`${mainTitleBoxQuery} > div:nth-child(2) > div > div span:nth-child(2) > span`);
+            let postText = document.querySelector(`${leftColumnQuery} > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)`);
+            let image = document.querySelector(`${leftColumnQuery} > div:nth-child(1) > div:nth-child(1) > img`);
+            let headline = document.querySelector(`${leftColumnQuery} > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div > div:nth-child(1)`);
+
+            // Right Column
+            let rightColumnQuery = `${modal} > div:nth-child(2)`;
+
+            let status = document.querySelector(`${rightColumnQuery} > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`);
+            let activity = document.querySelector(`${rightColumnQuery} > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)`);
+            let impressions = document.querySelector(`${rightColumnQuery} > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)`);
+            let spending = document.querySelector(`${rightColumnQuery} > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)`);
+
+            postText = postText ? postText.innerText : "";
 
             values.push({
               keyword: currentKeyword,
               pageName: pageName ? pageName.innerText : "",
+              postText: postText.length > 1000 ? postText.slice(0, 1000) + '...' : postText,
+              imageAlt: image ? image.alt : "",                 // image alt is often empty
+              headline: headline ? headline.innerText : "",
+              status: status ? status.innerText : "",
+              activity: activity ? activity.innerText : "",
               impressions: impressions ? impressions.innerText : "",
               spending: spending ? spending.innerText : "",
-              sponsor: sponsor ? sponsor.innerText : ""
+              sponsor: sponsor ? sponsor.innerText : ""         // sponsor may be empty
             });
             // debugger;
-            let closeButtons = document.querySelectorAll('.layerCancel');
-            for (let i = 0; i < closeButtons.length; i++) {
-              closeButtons[i].click();
-            }
+            let popup = document.querySelector('.uiLayer');
+            popup.parentNode.removeChild(popup);
             current++;
             if (current >= results.length) {
               console.log('All results printed');

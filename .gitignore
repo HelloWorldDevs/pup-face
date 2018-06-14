@@ -1,5 +1,5 @@
 node_modules
-creds.js
+env.js
 facebook.png
 client_secret.json
 credentials.json

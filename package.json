@@ -195,6 +195,8 @@
       "resolved": "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz",
       "version": "1.2.0"
     },
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
     "process-nextick-args": {
       "integrity": "sha1-FQ4gt1ZZCtP5EJPyWk8q2L/zC6M=",
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.7.tgz",
@@ -239,6 +241,7 @@
       "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.1.tgz",
       "version": "5.1.1"
     },
+    "sequelize": "^4.37.10",
     "string_decoder": {
       "integrity": "sha512-4AH6Z5fzNNBcH+6XDMfA/BTt87skxqJlO0lAh3Dker5zThcAxG6mKz+iGu308UKoPPQ8Dcqx/4JhujzltRa+hQ==",
       "requires": {

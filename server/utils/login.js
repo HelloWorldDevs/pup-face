@@ -3,7 +3,7 @@ module.exports = async (page) => {
     login: '#email',
     pass: '#pass'
   };
-  const CRED = require('./../creds.js');
+  const CRED = require('./../config/env.js');
   const sleep = require('./sleep');
 
   // login

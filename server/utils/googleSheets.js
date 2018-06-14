@@ -5,10 +5,10 @@ const makeRow = require('./makeRow');
 
 // If modifying these scopes, delete credentials.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
-const TOKEN_PATH = 'credentials.json';
+const TOKEN_PATH = './server/config/credentials.json';
 
-const client_secret = require('./../client_secret.json');
-const CRED = require('./../creds.js');
+const client_secret = require('./../config/client_secret.json');
+const CRED = require('./../config/env.js');
 
 async function authorize(credentials, callback) {
   const {client_secret, client_id, redirect_uris} = credentials.installed;

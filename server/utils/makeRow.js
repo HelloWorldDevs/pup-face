@@ -3,18 +3,19 @@ let makeRow = (data) => {
   let date = new Date();
   let impressions = getHighLow(data.impressions); // [low, high]
   let spending = getHighLow(data.spending); // [low, high]
+  let activity = data.activity.indexOf('Started') >= 0 ? data.activity.split(' on ')[1] : data.activity;
 
   return [
     data.keyword, // "Keyword",
     getDateString(date), // "Today's Date",
     data.pageName, // "Page Name",
     data.sponsor, // "Paid for by",
-    null, // "Unique Post Identifier",
-    null, // "Post Text",
-    null, // "Description of Image",
-    null, // "Headline",
-    null, // "Started running",
-    null, // "Status",
+    null, // "Unique Post Identifier" (none found so far),
+    data.postText, // "Post Text",
+    data.imageAlt, // "Description of Image" (often, if not always, empty),
+    data.headline, // "Headline",
+    activity, // "Started running",
+    data.status, // "Status",
     impressions[0], // "Low Impressions",
     impressions[1], // "High Impressions",
     spending[0], // "Low Money Spent",
