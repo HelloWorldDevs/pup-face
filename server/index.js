@@ -33,7 +33,7 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
       continue;
     }
 
-    console.log(`Searching for [${currentKeyword}]`);
+    console.log(`\nSearching for [${currentKeyword}]\n-----------------------------------`);
     await page.goto(`https://www.facebook.com/politicalcontentads/?active_status=all&q=${currentKeyword}`, {
       waitUntil: 'networkidle2'
     });
@@ -105,10 +105,9 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
       });
     }, currentKeyword);
 
-    console.log(`${results.length} Results found for [${currentKeyword}]`);
-    console.log(`Saving results for ${currentKeyword} to google sheets.`);
+    console.log(`${results.length} Results found for [${currentKeyword}].`);
     await saveAds(results); // save results to database
-    saveResults(results); // save results to google sheets
+    await saveResults(results); // save results to google sheets
     saveSearchToHistory(currentKeyword); // Save search term to history
     resultCount += results.length; // Add results to running total
 

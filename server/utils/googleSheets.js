@@ -77,12 +77,13 @@ let getKeywords = async () => {
 
 
 let saveResults = async (data) => {
+  console.log(`Saving ${data.length} lines to google sheets`);
   return new Promise((resolve, reject) => {
     // Authorize a client with credentials, then call the Google Sheets API.
     if(data) {
       authorize(client_secret, (auth) => {
         const sheets = google.sheets({ version: 'v4', auth });
-        console.log('saving data to sheets');
+
         sheets.spreadsheets.values.append({
           spreadsheetId: CRED.writeSheetId,
           range: 'Sheet1',
@@ -94,7 +95,7 @@ let saveResults = async (data) => {
           auth: auth
         }, (err, response) => {
           if (err) return console.error(err);
-          console.log(data.length + ' Lines saved');
+          // console.log(data.length + ' Lines saved');
           return resolve(response);
         })
       });
