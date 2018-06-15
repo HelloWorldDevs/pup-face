@@ -1,3 +1,5 @@
+const getHighLow = require('./getHighLow');
+const getDateString = require('./getDateString');
 
 let makeRow = (data) => {
   let date = new Date();
@@ -8,11 +10,11 @@ let makeRow = (data) => {
   return [
     data.keyword, // "Keyword",
     getDateString(date), // "Today's Date",
-    data.pageName, // "Page Name",
+    data.pagename, // "Page Name",
     data.sponsor, // "Paid for by",
     null, // "Unique Post Identifier" (none found so far),
-    data.postText, // "Post Text",
-    data.imageAlt, // "Description of Image" (often, if not always, empty),
+    data.posttext, // "Post Text",
+    data.imagealt, // "Description of Image" (often, if not always, empty),
     data.headline, // "Headline",
     activity, // "Started running",
     data.status, // "Status",
@@ -44,27 +46,5 @@ let makeRow = (data) => {
     null // "Top Location 10"
   ];
 };
-
-let getNumber = (str) => {
-  let num = parseInt(str.replace( /\D+/g, ''));
-  if(str.indexOf('K') !== -1) {
-    num = num * 1000;
-  } else if(str.indexOf('M') !== -1) {
-    num = num * 1000000;
-  }
-  return num || 0;
-};
-
-
-let getHighLow = (raw) => {
-  let impressions = raw.split(/[-<]/u);
-  return impressions.map(getNumber);
-};
-
-let getDateString = (date) => {
-  return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear().toString().slice(2)}`
-};
-
-
 
 module.exports = makeRow;

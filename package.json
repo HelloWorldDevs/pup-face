@@ -287,5 +287,8 @@
       "resolved": "https://registry.npmjs.org/yauzl/-/yauzl-2.4.1.tgz",
       "version": "2.4.1"
     }
+  },
+  "devDependencies": {
+    "sequelize-cli": "^4.0.0"
   }
 }
