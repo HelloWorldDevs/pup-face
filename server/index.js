@@ -10,6 +10,7 @@ const sleep = require('./utils/sleep');
 const saveSearchToHistory = require('./utils/saveSearchToHistory');
 const shouldRunSearch = require('./utils/shouldRunSearch');
 const scrapePage = require('./utils/scrapePage');
+const saveRawAdData = require('./utils/saveRawAdData');
 
 (async () => {
 
@@ -57,10 +58,12 @@ const scrapePage = require('./utils/scrapePage');
     if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
       // console.log('RESPONSE TO DATA');
       response.text().then(function (textBody) {
-        // console.log(JSON.parse(textBody.slice(9)).payload);
+        let response = JSON.parse(textBody.slice(9)).payload;
+        console.log(response);
+        saveRawAdData(response);
       })
     }
-    // console.log(req.method(), response.status(), req.url());
+
   });
 
   console.log(`\nSearching for Keywords:\n${keywords.join(', ')}\n`);

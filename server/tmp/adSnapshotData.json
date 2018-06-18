@@ -1,0 +1,4148 @@
+{
+  "isResultComplete": false,
+  "nextPageToken": "GfZa1prt5Yy4S4zstMmXoU2M6ozjy+Fciva7tMPRYNiY95mG7m\/Yte+VvvHAAZTXosDjyMYBkJODv5DgzgG0mu+akbnnAqTS5djx4fUCiNKZ6bWfkQOO4Ob7wLuPBqjkqpjet9sGwsythKeFngeM2Zf0y\/DBB+KKrL2P6qMBvKb9+vySZoaKyci16mfao9CvlbFqurmt96zzmgeit\/7H2MqZApT97rqO+OsC6quBqfjyvAfoipqziv9n7NbUpY38b+Tot97LvdUHzNGq4q2IyQGgho7DupJQxMPTsrvjUqy5rrC4gpwCkumNsfOhrwGwptfwm8mjBrajuZiSzvMGmIS3mOi0jQfU9\/6Vo5rWB+zSvNGruU+89MPwpZNX7Lr8gLOJ4gG617O48MygB\/y4sp\/88nLe3q784cPQAZbUm7n839EBvJTJxOzYiQLMs43PoOyvAvz5pKz48ULO+7zhpqRa\/JfPyO\/1ogTmxMzTi57CB6iyhpbL02zMkvu326GRAoyX3c7fkFra\/Jmu7tldoPHrmY\/+XryBlayVuI4H0tXSuMic5QKijLq3+Y9Mjpvq+puSYaD+06DTqWrSjaTu8fqpAcDmgprDk7AG1OLT0fH2SrD4+9vMtku2raSj6JVOwICk86KRbN7Fy7zuznSCjZn5nZNh8KLO+M6EwAS2vbmvy+iLBoDnpI\/rtEiMr7m9lZ9S7IqZge2TbJi1t4\/Nk5sBgN714JWehwLKn\/HhjK34BuiluoGPio8Dmvf9sIDjwQbUw+bNu7LIBry+8bfT6rgH3NqMjIT4XcSn8ZGctWKivMrjnaRshu2974+IxQGEsO6tgOXKAaCVxfuO\/IoCsJOKofzRkQfm8bq4g9iRB5SHguee75MH6qK+9\/bKqgfStfLYjMq9B6SHyIqvscYHGTU8eLQBAA==",
+  "pageResults": null,
+  "results": [
+    {
+      "adid": "23842870863390645",
+      "adArchiveID": "164770197698730",
+      "adInsightsInfo": {
+        "impressions": "5K - 10K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "18-24",
+            "unknown": 0,
+            "female": 0.04,
+            "male": 0.03
+          },
+          {
+            "age_range": "25-34",
+            "male": 0.12,
+            "female": 0.13,
+            "unknown": 0
+          },
+          {
+            "age_range": "35-44",
+            "male": 0.1,
+            "female": 0.12,
+            "unknown": 0
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.1,
+            "male": 0.09,
+            "unknown": 0
+          },
+          {
+            "age_range": "55-64",
+            "male": 0.06,
+            "female": 0.07,
+            "unknown": 0
+          },
+          {
+            "age_range": "65+",
+            "female": 0.04,
+            "unknown": 0,
+            "male": 0.03
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1528873200,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "21395843375",
+      "pageName": "Dialysis Patient Citizens",
+      "snapshotID": "164770201032063",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842870862760645",
+      "adArchiveID": "165864754085400",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "18-24",
+            "unknown": 0,
+            "female": 0.03,
+            "male": 0.02
+          },
+          {
+            "age_range": "25-34",
+            "male": 0.13,
+            "female": 0.11,
+            "unknown": 0
+          },
+          {
+            "age_range": "35-44",
+            "male": 0.12,
+            "female": 0.11,
+            "unknown": 0
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.09,
+            "male": 0.11,
+            "unknown": 0
+          },
+          {
+            "age_range": "55-64",
+            "male": 0.06,
+            "female": 0.06,
+            "unknown": 0
+          },
+          {
+            "age_range": "65+",
+            "female": 0.04,
+            "unknown": 0,
+            "male": 0.04
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1528873200,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "21395843375",
+      "pageName": "Dialysis Patient Citizens",
+      "snapshotID": "165864760752066",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842870863670645",
+      "adArchiveID": "171898586827611",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "18-24",
+            "unknown": 0,
+            "female": 0.02,
+            "male": 0.02
+          },
+          {
+            "age_range": "25-34",
+            "male": 0.09,
+            "female": 0.11,
+            "unknown": 0
+          },
+          {
+            "age_range": "35-44",
+            "male": 0.1,
+            "female": 0.14,
+            "unknown": 0
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.1,
+            "male": 0.09,
+            "unknown": 0
+          },
+          {
+            "age_range": "55-64",
+            "male": 0.06,
+            "female": 0.08,
+            "unknown": 0
+          },
+          {
+            "age_range": "65+",
+            "female": 0.06,
+            "unknown": 0,
+            "male": 0.04
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1528873200,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "21395843375",
+      "pageName": "Dialysis Patient Citizens",
+      "snapshotID": "171898590160944",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842870863120645",
+      "adArchiveID": "237791253659680",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "18-24",
+            "female": 0.02,
+            "male": 0.02
+          },
+          {
+            "age_range": "25-34",
+            "male": 0.13,
+            "female": 0.1,
+            "unknown": 0
+          },
+          {
+            "age_range": "35-44",
+            "male": 0.12,
+            "female": 0.1,
+            "unknown": 0
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.09,
+            "male": 0.11,
+            "unknown": 0
+          },
+          {
+            "age_range": "55-64",
+            "male": 0.08,
+            "female": 0.07,
+            "unknown": 0
+          },
+          {
+            "age_range": "65+",
+            "female": 0.05,
+            "unknown": 0,
+            "male": 0.05
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1528873200,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "21395843375",
+      "pageName": "Dialysis Patient Citizens",
+      "snapshotID": "237791256993013",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842870863250645",
+      "adArchiveID": "256441554923887",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "18-24",
+            "unknown": 0,
+            "female": 0.02,
+            "male": 0.03
+          },
+          {
+            "age_range": "25-34",
+            "male": 0.14,
+            "female": 0.12,
+            "unknown": 0
+          },
+          {
+            "age_range": "35-44",
+            "male": 0.1,
+            "female": 0.12,
+            "unknown": 0
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.09,
+            "male": 0.09,
+            "unknown": 0
+          },
+          {
+            "age_range": "55-64",
+            "male": 0.05,
+            "female": 0.07,
+            "unknown": 0
+          },
+          {
+            "age_range": "65+",
+            "female": 0.05,
+            "unknown": 0,
+            "male": 0.04
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1528873200,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "21395843375",
+      "pageName": "Dialysis Patient Citizens",
+      "snapshotID": "256441558257220",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805937440506",
+      "adArchiveID": "213635692700481",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.25,
+            "male": 0.08
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.24,
+            "male": 0.05
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.13,
+            "male": 0.03
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.1,
+            "male": 0.01
+          },
+          {
+            "age_range": "65+",
+            "female": 0.06,
+            "male": 0
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "213635696033814",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805936680506",
+      "adArchiveID": "1266716710127800",
+      "adInsightsInfo": {
+        "impressions": "<1K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.29,
+            "male": 0.05
+          },
+          {
+            "age_range": "35-44",
+            "female": 0.24,
+            "male": 0.03
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.12,
+            "male": 0.01
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.11,
+            "male": 0.01
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "1266716713461133",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805937260506",
+      "adArchiveID": "1714835938553691",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.07,
+            "male": 0.11
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.14
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.14
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.1
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.06,
+            "male": 0.06
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.98
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "1714835948553690",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805935620506",
+      "adArchiveID": "159237404924352",
+      "adInsightsInfo": {
+        "impressions": "10K - 50K",
+        "spend": "$100 - $499",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.1,
+            "male": 0.11
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.11,
+            "male": 0.12
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.1,
+            "male": 0.09
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.08
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.05
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "159237408257685",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805935140506",
+      "adArchiveID": "180855365905350",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.39,
+            "male": 0.04
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.25,
+            "male": 0.03
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.12,
+            "male": 0.02
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.06,
+            "male": 0
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.03,
+            "male": 0
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "180855369238683",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805935020506",
+      "adArchiveID": "237835560100534",
+      "adInsightsInfo": {
+        "impressions": "5K - 10K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.12,
+            "male": 0.19
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.16
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.1
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.06,
+            "male": 0.06
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.04,
+            "male": 0.05
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.98
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "Wyoming",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "237835566767200",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805935430506",
+      "adArchiveID": "341185373072716",
+      "adInsightsInfo": {
+        "impressions": "<1K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "female": 0.33,
+            "male": 0.04
+          },
+          {
+            "age_range": "35-44",
+            "female": 0.31,
+            "male": 0.02
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.18
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.08
+          },
+          {
+            "age_range": "65+",
+            "female": 0.02
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "341185379739382",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805935900506",
+      "adArchiveID": "578861432485760",
+      "adInsightsInfo": {
+        "impressions": "<1K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "female": 0.27,
+            "male": 0.06
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.21,
+            "male": 0.02
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.2,
+            "male": 0.01
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.08,
+            "male": 0
+          },
+          {
+            "age_range": "65+",
+            "female": 0.07,
+            "male": 0.02
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "578861435819093",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805936220506",
+      "adArchiveID": "1953507458295781",
+      "adInsightsInfo": {
+        "impressions": "50K - 100K",
+        "spend": "$500 - $999",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.13
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.12,
+            "male": 0.13
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.1,
+            "male": 0.11
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.07
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.06,
+            "male": 0.04
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "South Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Wyoming",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "1953507461629114",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805934320506",
+      "adArchiveID": "877584092449140",
+      "adInsightsInfo": {
+        "impressions": "10K - 50K",
+        "spend": "$500 - $999",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.23,
+            "male": 0.17
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.14,
+            "male": 0.13
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.06
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.05,
+            "male": 0.03
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.03,
+            "male": 0.02
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "North Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Delaware",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maine",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "877584095782473",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805934180506",
+      "adArchiveID": "1833487230287309",
+      "adInsightsInfo": {
+        "impressions": "50K - 100K",
+        "spend": "$500 - $999",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.16,
+            "male": 0.13
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.16,
+            "male": 0.11
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.11,
+            "male": 0.07
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.07,
+            "male": 0.05
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.05,
+            "male": 0.03
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "North Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Rhode Island",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "South Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "West Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.98
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Delaware",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maine",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Wyoming",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "1833487233620642",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805934730506",
+      "adArchiveID": "1848046528549098",
+      "adInsightsInfo": {
+        "impressions": "50K - 100K",
+        "spend": "$1K - $5K",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.19,
+            "male": 0.17
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.13,
+            "male": 0.14
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.08
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.05,
+            "male": 0.04
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.03,
+            "male": 0.02
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "West Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "1848046531882431",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805934460506",
+      "adArchiveID": "2095302404091806",
+      "adInsightsInfo": {
+        "impressions": "<1K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.32,
+            "male": 0.04
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.28,
+            "male": 0.03
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.14,
+            "male": 0.02
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.04,
+            "male": 0
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2095302407425139",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805926920506",
+      "adArchiveID": "206571296626350",
+      "adInsightsInfo": {
+        "impressions": "10K - 50K",
+        "spend": "$100 - $499",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.12
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.07
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.11,
+            "male": 0.08
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.12,
+            "male": 0.08
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.12,
+            "male": 0.07
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Wyoming",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "206571299959683",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927510506",
+      "adArchiveID": "216418588961250",
+      "adInsightsInfo": {
+        "impressions": "50K - 100K",
+        "spend": "$1K - $5K",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.41,
+            "male": 0.06
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.25,
+            "male": 0.03
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.11,
+            "male": 0.01
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.04,
+            "male": 0
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.02,
+            "male": 0
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "216418592294583",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927390506",
+      "adArchiveID": "238116983623441",
+      "adInsightsInfo": {
+        "impressions": "<1K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "female": 0.28,
+            "male": 0.05
+          },
+          {
+            "age_range": "35-44",
+            "female": 0.2,
+            "male": 0.04
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.14,
+            "male": 0.03
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.1,
+            "male": 0.03
+          },
+          {
+            "age_range": "65+",
+            "female": 0.08,
+            "male": 0.01
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "238116986956774",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805928030506",
+      "adArchiveID": "433347150461763",
+      "adInsightsInfo": {
+        "impressions": "500K - 1M",
+        "spend": "$10K - $50K",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "13-17",
+            "unknown": 0
+          },
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.23,
+            "male": 0.22
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.15,
+            "male": 0.13
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.06
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.03,
+            "male": 0.02
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.02,
+            "male": 0.01
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Hampshire",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "North Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Rhode Island",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "South Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Vermont",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "West Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Delaware",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maine",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Wyoming",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "433347153795096",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805926800506",
+      "adArchiveID": "445937912499202",
+      "adInsightsInfo": {
+        "impressions": "10K - 50K",
+        "spend": "$100 - $499",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.46,
+            "male": 0.05
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.25,
+            "male": 0.03
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.1,
+            "male": 0.01
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.03,
+            "male": 0
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.01,
+            "male": 0
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "445937915832535",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927040506",
+      "adArchiveID": "587072498345296",
+      "adInsightsInfo": {
+        "impressions": "100K - 200K",
+        "spend": "$1K - $5K",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.27,
+            "male": 0.2
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.17,
+            "male": 0.1
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.05
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.04,
+            "male": 0.01
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.02,
+            "male": 0.01
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "North Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Rhode Island",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "South Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Delaware",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maine",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "587072501678629",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927780506",
+      "adArchiveID": "2009116479407320",
+      "adInsightsInfo": {
+        "impressions": "200K - 500K",
+        "spend": "$5K - $10K",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.26,
+            "male": 0.26
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.13,
+            "male": 0.13
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.06,
+            "male": 0.05
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.02,
+            "male": 0.01
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.01,
+            "male": 0.01
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Hampshire",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "North Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Rhode Island",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "South Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Vermont",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "West Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.98
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Delaware",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maine",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Wyoming",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2009116482740653",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927890506",
+      "adArchiveID": "2009220522663027",
+      "adInsightsInfo": {
+        "impressions": "<1K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0.01,
+            "female": 0.32,
+            "male": 0.08
+          },
+          {
+            "age_range": "35-44",
+            "female": 0.1,
+            "male": 0.05
+          },
+          {
+            "age_range": "45-54",
+            "female": 0.16,
+            "male": 0.03
+          },
+          {
+            "age_range": "55-64",
+            "female": 0.12
+          },
+          {
+            "age_range": "65+",
+            "female": 0.08
+          }
+        ],
+        "locationData": [
+          {
+            "region": "California",
+            "reach": 1
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2009220525996360",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927150506",
+      "adArchiveID": "2014017378861514",
+      "adInsightsInfo": {
+        "impressions": "10K - 50K",
+        "spend": "$100 - $499",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.1,
+            "male": 0.19
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.07,
+            "male": 0.11
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.1
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.09
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.05,
+            "male": 0.07
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Unknown",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "West Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2014017382194847",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927260506",
+      "adArchiveID": "2063971087009973",
+      "adInsightsInfo": {
+        "impressions": "100K - 200K",
+        "spend": "$1K - $5K",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.25,
+            "male": 0.27
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.13,
+            "male": 0.13
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.06,
+            "male": 0.05
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.01,
+            "male": 0.02
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.01,
+            "male": 0.01
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "New Hampshire",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Rhode Island",
+            "reach": 0
+          },
+          {
+            "region": "Montana",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "South Dakota",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Vermont",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Washington",
+            "reach": 0
+          },
+          {
+            "region": "West Virginia",
+            "reach": 0
+          },
+          {
+            "region": "Nebraska",
+            "reach": 0
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Alaska",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Arkansas",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.99
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Connecticut",
+            "reach": 0
+          },
+          {
+            "region": "Delaware",
+            "reach": 0
+          },
+          {
+            "region": "District of Columbia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Iowa",
+            "reach": 0
+          },
+          {
+            "region": "Kansas",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Massachusetts",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Minnesota",
+            "reach": 0
+          },
+          {
+            "region": "Wisconsin",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2063971093676639",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805927640506",
+      "adArchiveID": "2105738269707625",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.1,
+            "male": 0.24
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.12
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.06,
+            "male": 0.1
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.05,
+            "male": 0.09
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.04,
+            "male": 0.05
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "New Jersey",
+            "reach": 0
+          },
+          {
+            "region": "Utah",
+            "reach": 0
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          },
+          {
+            "region": "Tennessee",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Pennsylvania",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Oklahoma",
+            "reach": 0
+          },
+          {
+            "region": "North Carolina",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.98
+          },
+          {
+            "region": "Missouri",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "Kentucky",
+            "reach": 0
+          },
+          {
+            "region": "Indiana",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "Colorado",
+            "reach": 0
+          },
+          {
+            "region": "Virginia",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2105738279707624",
+      "startDate": 1527145200
+    },
+    {
+      "adid": "23842805926700506",
+      "adArchiveID": "2125104597762514",
+      "adInsightsInfo": {
+        "impressions": "1K - 5K",
+        "spend": "<$100",
+        "currency": "USD",
+        "ageGenderData": [
+          {
+            "age_range": "25-34",
+            "unknown": 0,
+            "female": 0.14,
+            "male": 0.2
+          },
+          {
+            "age_range": "35-44",
+            "unknown": 0,
+            "female": 0.09,
+            "male": 0.09
+          },
+          {
+            "age_range": "45-54",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.08
+          },
+          {
+            "age_range": "55-64",
+            "unknown": 0,
+            "female": 0.07,
+            "male": 0.07
+          },
+          {
+            "age_range": "65+",
+            "unknown": 0,
+            "female": 0.08,
+            "male": 0.05
+          }
+        ],
+        "locationData": [
+          {
+            "region": "Alabama",
+            "reach": 0
+          },
+          {
+            "region": "Michigan",
+            "reach": 0
+          },
+          {
+            "region": "South Carolina",
+            "reach": 0
+          },
+          {
+            "region": "Oregon",
+            "reach": 0
+          },
+          {
+            "region": "Ohio",
+            "reach": 0
+          },
+          {
+            "region": "New York",
+            "reach": 0
+          },
+          {
+            "region": "New Mexico",
+            "reach": 0
+          },
+          {
+            "region": "Nevada",
+            "reach": 0
+          },
+          {
+            "region": "Mississippi",
+            "reach": 0
+          },
+          {
+            "region": "Maryland",
+            "reach": 0
+          },
+          {
+            "region": "Arizona",
+            "reach": 0
+          },
+          {
+            "region": "Louisiana",
+            "reach": 0
+          },
+          {
+            "region": "Illinois",
+            "reach": 0
+          },
+          {
+            "region": "Idaho",
+            "reach": 0
+          },
+          {
+            "region": "Hawaii",
+            "reach": 0
+          },
+          {
+            "region": "Georgia",
+            "reach": 0
+          },
+          {
+            "region": "Florida",
+            "reach": 0
+          },
+          {
+            "region": "California",
+            "reach": 0.98
+          },
+          {
+            "region": "Texas",
+            "reach": 0
+          }
+        ]
+      },
+      "archiveTypes": [
+        1
+      ],
+      "endDate": 1527750000,
+      "gatedType": "eligible",
+      "isActive": false,
+      "pageID": "2063354270371825",
+      "pageName": "Stop UHW Initiative Abuse",
+      "snapshotID": "2125104601095847",
+      "startDate": 1527145200
+    }
+  ],
+  "totalCount": 56
+}
