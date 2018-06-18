@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       sponsor: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       posttext: {
         type: Sequelize.TEXT
@@ -26,7 +26,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       headline: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       activity: {
         type: Sequelize.STRING

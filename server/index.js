@@ -20,6 +20,37 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
   let page = await browser.newPage();
   page = await login(page);
 
+  await page.setRequestInterception(true);
+
+  // enable log forwarding
+  page.on('console', msg => {
+    for (let i = 0; i < msg.args.length; ++i)
+      console.log(`${i}: ${msg.args[i]}`);
+  });
+
+  page.on('request', request => {
+    let url = request.url();
+    if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
+      console.log('BINGO');
+      console.log(url);
+    }
+
+    request.continue(); // pass it through.
+  });
+
+  // Experimental method of intercepting Ajax call to get data directly
+  page.on('response', response => {
+    const req = response.request();
+    let url = req.url();
+    if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
+      console.log('RESPONSE TO DATA');
+      response.text().then(function (textBody) {
+        console.log(JSON.parse(textBody.slice(9)).payload);
+      })
+    }
+    // console.log(req.method(), response.status(), req.url());
+  });
+
   console.log(`\nSearching for Keywords:\n${keywords.join(', ')}\n`);
 
   let resultCount = 0;
@@ -96,6 +127,8 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
               console.log('All results printed');
               clearInterval(getData);
               return resolve(values);
+            } else {
+              console.log(`Scraping ${current}/${results.length}`);
             }
           }, 200);
         } else {
