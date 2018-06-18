@@ -6,9 +6,9 @@ const autoScroll = require('./utils/autoScroll');
 const sleep = require('./utils/sleep');
 const saveSearchToHistory = require('./utils/saveSearchToHistory');
 const saveRawAdData = require('./utils/saveRawAdData');
+const shouldRunSearch = require('./utils/shouldRunSearch');
 
 // const saveResults = googleSheets.saveResults;
-// const shouldRunSearch = require('./utils/shouldRunSearch');
 // const scrapePage = require('./utils/scrapePage');
 // const saveAds = require('./utils/saveAds');
 
@@ -94,11 +94,11 @@ const saveRawAdData = require('./utils/saveRawAdData');
 
     // TODO turn back on
     // Check search history and skip keyword if it has run already today.
-    // let shouldRun = await shouldRunSearch(currentKeyword);
-    // if(!shouldRun) {
-    //   console.log(`Search for [${currentKeyword}] already ran today. Skipping.`);
-    //   continue;
-    // }
+    let shouldRun = await shouldRunSearch(currentKeyword);
+    if(!shouldRun) {
+      console.log(`Search for [${currentKeyword}] already ran today. Skipping.`);
+      continue;
+    }
 
     // Wait random lengths
     let random = Math.floor(Math.random() * 10) + 3;

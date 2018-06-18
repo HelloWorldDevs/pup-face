@@ -52,6 +52,42 @@ module.exports = {
       highspending: {
         type: Sequelize.INTEGER
       },
+      women18to24: {
+        type: Sequelize.FLOAT
+      },
+      women15to34: {
+        type: Sequelize.FLOAT
+      },
+      women35to44: {
+        type: Sequelize.FLOAT
+      },
+      women45to54: {
+        type: Sequelize.FLOAT
+      },
+      women55to64: {
+        type: Sequelize.FLOAT
+      },
+      women65plus: {
+        type: Sequelize.FLOAT
+      },
+      men18to24: {
+        type: Sequelize.FLOAT
+      },
+      men15to34: {
+        type: Sequelize.FLOAT
+      },
+      men35to44: {
+        type: Sequelize.FLOAT
+      },
+      men45to54: {
+        type: Sequelize.FLOAT
+      },
+      men55to64: {
+        type: Sequelize.FLOAT
+      },
+      men65plus: {
+        type: Sequelize.FLOAT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

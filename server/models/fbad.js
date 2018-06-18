@@ -14,7 +14,19 @@ module.exports = (sequelize, DataTypes) => {
     lowimpressions: DataTypes.INTEGER,
     highimpressions: DataTypes.INTEGER,
     lowspending: DataTypes.INTEGER,
-    highspending: DataTypes.INTEGER
+    highspending: DataTypes.INTEGER,
+    women18to24: DataTypes.FLOAT,
+    women15to34: DataTypes.FLOAT,
+    women35to44: DataTypes.FLOAT,
+    women45to54: DataTypes.FLOAT,
+    women55to64: DataTypes.FLOAT,
+    women65plus: DataTypes.FLOAT,
+    men18to24: DataTypes.FLOAT,
+    men15to34: DataTypes.FLOAT,
+    men35to44: DataTypes.FLOAT,
+    men45to54: DataTypes.FLOAT,
+    men55to64: DataTypes.FLOAT,
+    men65plus: DataTypes.FLOAT
 
   }, {});
   fbad.associate = function(models) {

@@ -11,6 +11,14 @@ module.exports = (adData, pageDataObj, keyword) => {
     let spending = getHighLow(ad["adInsightsInfo"]["spend"]);
     let pageData = pageDataObj[ad.adArchiveID];
 
+    let ageRange1 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '18-24');
+    let ageRange2 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '25-34');
+    let ageRange3 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '35-44');
+    let ageRange4 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '45-54');
+    let ageRange5 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '55-64');
+    let ageRange6 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '65+');
+
+
     let newAd = {
       archiveid: ad.adArchiveID,
       keyword: keyword,
@@ -25,10 +33,24 @@ module.exports = (adData, pageDataObj, keyword) => {
       lowimpressions: impressions[0],
       highimpressions: impressions[1],
       lowspending: spending[0],
-      highspending: spending[1]
+      highspending: spending[1],
+      women18to24: ageRange1 ? ageRange1["female"] : null ,
+      women15to34: ageRange2 ? ageRange2["female"] : null ,
+      women35to44: ageRange3 ? ageRange3["female"] : null ,
+      women45to54: ageRange4 ? ageRange4["female"] : null ,
+      women55to64: ageRange5 ? ageRange5["female"] : null ,
+      women65plus: ageRange6 ? ageRange6["female"] : null ,
+      men18to24: ageRange1 ? ageRange1["male"] : null,
+      men15to34: ageRange2 ? ageRange2["male"] : null,
+      men35to44: ageRange3 ? ageRange3["male"] : null,
+      men45to54: ageRange4 ? ageRange4["male"] : null,
+      men55to64: ageRange5 ? ageRange5["male"] : null,
+      men65plus: ageRange6 ? ageRange6["male"] : null
     };
-
+    console.log(newAd);
     fbad.create(newAd);
+
+
   });
 
 };
