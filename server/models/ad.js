@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Ad = sequelize.define('ad', {
+    upi: DataTypes.STRING,
     keyword: DataTypes.STRING,
     date: DataTypes.DATEONLY,
     pagename: DataTypes.STRING,

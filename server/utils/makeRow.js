@@ -12,7 +12,7 @@ let makeRow = (data) => {
     getDateString(date), // "Today's Date",
     data.pagename, // "Page Name",
     data.sponsor, // "Paid for by",
-    null, // "Unique Post Identifier" (none found so far),
+    data.upi, // "Unique Post Identifier" (none found so far),
     data.posttext, // "Post Text",
     data.imagealt, // "Description of Image" (often, if not always, empty),
     data.headline, // "Headline",
