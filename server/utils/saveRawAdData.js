@@ -4,17 +4,13 @@ const getHighLow = require('./getHighLow');
 const getDateString = require('./getDateString');
 const fbad = require('../models').fbad;
 
-module.exports = async (adData, pageDataObj, keyword) => {
-  console.log(keyword);
-  console.log("adData: ");
-  // console.log(adData[0]);
-  // console.log(pageData);
-  // console.log('Saving ads to database.');
+module.exports = (adData, pageDataObj, keyword) => {
+  console.log(`Saving ${adData.length} ads to database for keyword ${keyword}.`);
   adData.forEach(ad => {
     let impressions = getHighLow(ad["adInsightsInfo"]["impressions"]);
     let spending = getHighLow(ad["adInsightsInfo"]["spend"]);
     let pageData = pageDataObj[ad.adArchiveID];
-    // console.log(pageData);
+
     let newAd = {
       archiveid: ad.adArchiveID,
       keyword: keyword,
@@ -31,19 +27,8 @@ module.exports = async (adData, pageDataObj, keyword) => {
       lowspending: spending[0],
       highspending: spending[1]
     };
-    console.log(newAd);
+
     fbad.create(newAd);
-
-
-
-
-
-    // ad.lowimpressions = impressions[0];
-    // ad.highimpressions = impressions[1];
-    // ad.lowspending = spending[0];
-    // ad.highspending = spending[1];
-    // ad.date = new Date();
-    // Ad.create(ad);
   });
 
 };

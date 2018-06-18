@@ -1,16 +1,16 @@
 const puppeteer = require('puppeteer');
-
 const googleSheets = require('./utils/googleSheets');
 const getKeywords = googleSheets.getKeywords;
-const saveResults = googleSheets.saveResults;
 const login = require('./utils/login');
 const autoScroll = require('./utils/autoScroll');
-const saveAds = require('./utils/saveAds');
 const sleep = require('./utils/sleep');
 const saveSearchToHistory = require('./utils/saveSearchToHistory');
-const shouldRunSearch = require('./utils/shouldRunSearch');
-const scrapePage = require('./utils/scrapePage');
 const saveRawAdData = require('./utils/saveRawAdData');
+
+// const saveResults = googleSheets.saveResults;
+// const shouldRunSearch = require('./utils/shouldRunSearch');
+// const scrapePage = require('./utils/scrapePage');
+// const saveAds = require('./utils/saveAds');
 
 (async () => {
 
@@ -19,8 +19,8 @@ const saveRawAdData = require('./utils/saveRawAdData');
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     devtools: false
   });
-  // const keywords = await getKeywords();
-  const keywords = ['dialysis'];
+  const keywords = await getKeywords();
+  // const keywords = ['dialysis'];
   let page = await browser.newPage();
   page = await login(page);
 
@@ -66,20 +66,17 @@ const saveRawAdData = require('./utils/saveRawAdData');
       response.text().then(function (textBody) {
         let response = JSON.parse(textBody.slice(9)).payload;
         adData = adData.concat(response.results);
-        console.log(`${adData.length} Ads in memory`)
         // saveRawAdData(response);
       })
 
     } else if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
-      console.log('data bundle 2');
-      // console.log('RESPONSE TO DATA');
+      console.log('data bundle 2'); // happens second
+
       response.text().then(function (textBody) {
         let response = JSON.parse(textBody.slice(9)).payload;
         Object.assign(pageData, response);
-        console.log('insight items:' + Object.keys(pageData).length);
         saveRawAdData(adData, pageData, currentKeyword);
         adData = [];
-        pageData = {};
       })
     }
 
@@ -87,7 +84,7 @@ const saveRawAdData = require('./utils/saveRawAdData');
 
   console.log(`\nSearching for Keywords:\n${keywords.join(', ')}\n`);
 
-  let resultCount = 0;
+  // let resultCount = 0;
   for(let k=0; k<keywords.length; k++) {
     currentKeyword = keywords[k];
     // reset id queue
@@ -103,16 +100,8 @@ const saveRawAdData = require('./utils/saveRawAdData');
     //   continue;
     // }
 
-
-
-
-
-
-
-
-
     // Wait random lengths
-    let random = Math.floor(Math.random() * 10);
+    let random = Math.floor(Math.random() * 10) + 3;
     console.log(`Waiting ${random} seconds`);
     await sleep(random * 1000);
 
@@ -126,8 +115,13 @@ const saveRawAdData = require('./utils/saveRawAdData');
     // Scroll to load all results
     console.log('Scrolling to load all results. This may take a while for many results.');
     await autoScroll(page);
-    console.log(`Scrolling complete. Scraping [${currentKeyword}]`);
 
+    console.log('Waiting 5 seconds for all results');
+    saveSearchToHistory(currentKeyword); // Save search term to history
+    sleep(5000);
+
+
+    // For scrape method
     // let results = await scrapePage(page, currentKeyword, ids);
 
     // console.log(`${results.length} Results found for [${currentKeyword}].`);
@@ -137,6 +131,6 @@ const saveRawAdData = require('./utils/saveRawAdData');
     // resultCount += results.length; // Add results to running total
 
   }
-  console.log(`Scan Complete. ${resultCount} results found total.`);
+  console.log(`Scan Complete.`);
   await browser.close();
 })();
