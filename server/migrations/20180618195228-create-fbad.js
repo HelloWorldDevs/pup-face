@@ -7,7 +7,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      adid: {
+      archiveid: {
+        type: Sequelize.STRING
+      },
+      keyword: {
         type: Sequelize.STRING
       },
       date: {
@@ -28,8 +31,11 @@ module.exports = {
       headline: {
         type: Sequelize.TEXT
       },
-      activity: {
-        type: Sequelize.STRING
+      startdate: {
+        type: Sequelize.DATEONLY
+      },
+      enddate: {
+        type: Sequelize.DATEONLY
       },
       status: {
         type: Sequelize.STRING

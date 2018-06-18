@@ -15,17 +15,21 @@ const saveRawAdData = require('./utils/saveRawAdData');
 (async () => {
 
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    devtools: false
+    devtools: true
   });
-  const keywords = await getKeywords();
+  // const keywords = await getKeywords();
+  const keywords = ['dialysis'];
   let page = await browser.newPage();
   page = await login(page);
 
   await page.setRequestInterception(true);
 
   let ids = [];
+  let adData = [];
+  let pageData = {};
+  let currentKeyword;
 
   // enable log forwarding
   page.on('console', msg => {
@@ -39,13 +43,14 @@ const saveRawAdData = require('./utils/saveRawAdData');
     return url.split(/&ids\[\d+\]=/);
   };
 
+
   page.on('request', request => {
     let url = request.url();
     if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
-      console.log('BINGO');
-      console.log(url);
+      // console.log('BINGO');
+      // console.log(url);
       ids = ids.concat(getIds(url));
-      console.log(ids);
+      // console.log(ids);
     }
 
     request.continue(); // pass it through.
@@ -55,12 +60,26 @@ const saveRawAdData = require('./utils/saveRawAdData');
   page.on('response', response => {
     const req = response.request();
     let url = req.url();
-    if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
+    if(url.indexOf(`https://www.facebook.com/politicalcontentads/ads/?q=`) >= 0) {
+      // console.log(url);
+      console.log('data bundle 1'); // happens first
+      response.text().then(function (textBody) {
+        let response = JSON.parse(textBody.slice(9)).payload;
+        adData = adData.concat(response.results);
+        console.log(`${adData.length} Ads in memory`)
+        // saveRawAdData(response);
+      })
+
+    } else if(url.indexOf('https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0') >= 0) {
+      console.log('data bundle 2');
       // console.log('RESPONSE TO DATA');
       response.text().then(function (textBody) {
         let response = JSON.parse(textBody.slice(9)).payload;
-        console.log(response);
-        saveRawAdData(response);
+        Object.assign(pageData, response);
+        console.log('insight items:' + Object.keys(pageData).length);
+        saveRawAdData(adData, pageData, currentKeyword);
+        adData = [];
+        pageData = {};
       })
     }
 
@@ -70,17 +89,27 @@ const saveRawAdData = require('./utils/saveRawAdData');
 
   let resultCount = 0;
   for(let k=0; k<keywords.length; k++) {
-    let currentKeyword = keywords[k];
+    currentKeyword = keywords[k];
     // reset id queue
     ids = [];
+    adData = [];
+    pageData = {};
 
-
+    // TODO turn back on
     // Check search history and skip keyword if it has run already today.
-    let shouldRun = await shouldRunSearch(currentKeyword);
-    if(!shouldRun) {
-      console.log(`Search for [${currentKeyword}] already ran today. Skipping.`);
-      continue;
-    }
+    // let shouldRun = await shouldRunSearch(currentKeyword);
+    // if(!shouldRun) {
+    //   console.log(`Search for [${currentKeyword}] already ran today. Skipping.`);
+    //   continue;
+    // }
+
+
+
+
+
+
+
+
 
     // Wait random lengths
     let random = Math.floor(Math.random() * 10);
@@ -99,13 +128,13 @@ const saveRawAdData = require('./utils/saveRawAdData');
     await autoScroll(page);
     console.log(`Scrolling complete. Scraping [${currentKeyword}]`);
 
-    let results = await scrapePage(page, currentKeyword, ids);
+    // let results = await scrapePage(page, currentKeyword, ids);
 
-    console.log(`${results.length} Results found for [${currentKeyword}].`);
-    await saveAds(results); // save results to database
+    // console.log(`${results.length} Results found for [${currentKeyword}].`);
+    // await saveAds(results); // save results to database
     // await saveResults(results); // save results to google sheets
-    saveSearchToHistory(currentKeyword); // Save search term to history
-    resultCount += results.length; // Add results to running total
+    // saveSearchToHistory(currentKeyword); // Save search term to history
+    // resultCount += results.length; // Add results to running total
 
   }
   console.log(`Scan Complete. ${resultCount} results found total.`);
