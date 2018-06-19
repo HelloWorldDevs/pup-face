@@ -75,8 +75,10 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
       response.text().then(function (textBody) {
         let response = JSON.parse(textBody.slice(9)).payload;
         Object.assign(pageData, response);
-        saveRawAdData(adData, pageData, currentKeyword);
-        adData = [];
+        if(adData.length > 0) {
+          saveRawAdData(adData, pageData, currentKeyword);
+          adData = [];
+        }
       })
     }
 
@@ -92,7 +94,6 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
     adData = [];
     pageData = {};
 
-    // TODO turn back on
     // Check search history and skip keyword if it has run already today.
     let shouldRun = await shouldRunSearch(currentKeyword);
     if(!shouldRun) {
