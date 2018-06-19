@@ -26,8 +26,17 @@ module.exports = (sequelize, DataTypes) => {
     men35to44: DataTypes.FLOAT,
     men45to54: DataTypes.FLOAT,
     men55to64: DataTypes.FLOAT,
-    men65plus: DataTypes.FLOAT
-
+    men65plus: DataTypes.FLOAT,
+    location1: DataTypes.STRING,
+    location2: DataTypes.STRING,
+    location3: DataTypes.STRING,
+    location4: DataTypes.STRING,
+    location5: DataTypes.STRING,
+    location6: DataTypes.STRING,
+    location7: DataTypes.STRING,
+    location8: DataTypes.STRING,
+    location9: DataTypes.STRING,
+    location10: DataTypes.STRING
   }, {});
   fbad.associate = function(models) {
     // associations can be defined here

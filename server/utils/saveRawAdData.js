@@ -17,7 +17,8 @@ module.exports = (adData, pageDataObj, keyword) => {
     let ageRange4 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '45-54');
     let ageRange5 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '55-64');
     let ageRange6 = ad["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '65+');
-
+    let locations = ad["adInsightsInfo"]["locationData"].sort((a, b) => b.reach - a.reach)
+      .filter(l => l.reach !== 0).map(l => l.region);
 
     let newAd = {
       archiveid: ad.adArchiveID,
@@ -45,7 +46,17 @@ module.exports = (adData, pageDataObj, keyword) => {
       men35to44: ageRange3 ? ageRange3["male"] : null,
       men45to54: ageRange4 ? ageRange4["male"] : null,
       men55to64: ageRange5 ? ageRange5["male"] : null,
-      men65plus: ageRange6 ? ageRange6["male"] : null
+      men65plus: ageRange6 ? ageRange6["male"] : null,
+      location1: locations[0] || null,
+      location2: locations[1] || null,
+      location3: locations[2] || null,
+      location4: locations[3] || null,
+      location5: locations[4] || null,
+      location6: locations[5] || null,
+      location7: locations[6] || null,
+      location8: locations[7] || null,
+      location9: locations[8] || null,
+      location10: locations[9] || null
     };
     console.log(newAd);
     fbad.create(newAd);
