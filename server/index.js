@@ -133,5 +133,9 @@ const shouldRunSearch = require('./utils/shouldRunSearch');
 
   }
   console.log(`Scan Complete.`);
-  return await browser.close();
+  await browser.close();
+
+  setTimeout((function() {
+    return process.exit(22);
+  }), 5000);
 })();
