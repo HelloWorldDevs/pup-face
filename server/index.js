@@ -12,9 +12,9 @@ const saveScrape = require('./utils/saveScrape');
 (async () => {
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    devtools: true
+    devtools: false
   });
   const keywords = await getKeywords();
   // const keywords = ['vault'];
