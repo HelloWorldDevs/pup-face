@@ -44,6 +44,7 @@
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
       "version": "1.0.2"
     },
+    "crypto": "^1.0.1",
     "debug": {
       "integrity": "sha1-5zFTHKLt4n0YgiJCfaF4IdaP9Pw=",
       "requires": {

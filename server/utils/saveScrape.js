@@ -1,8 +1,8 @@
 const Scrape = require('../models').scrape;
 
 // Experimental method of intercepting Ajax call to get data directly
-module.exports = (response) => {
-  // TODO: generate random hash for search
+module.exports = (response, {currentKeyword, hash}) => {
+
   const req = response.request();
   let url = req.url();
   let target;
@@ -17,17 +17,14 @@ module.exports = (response) => {
   debugger;
 
   response.text().then(function (textBody) {
-    console.log(`saving ajax response for target: ${target}`);
-    const hash = 'test';
-    const response = textBody;
-    const date = new Date();
-
+    console.log(`saving ajax response for keyword [${currentKeyword}] and target [${target}]`);
     let scrapeData = {
-      hash,
+      hash: hash,
+      keyword: currentKeyword,
       request: url,
-      response,
+      response: textBody,
       target,
-      date
+      status: 'new'
     };
 
     Scrape.create(scrapeData);

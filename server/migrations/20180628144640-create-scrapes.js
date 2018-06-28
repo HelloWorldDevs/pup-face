@@ -12,6 +12,9 @@ module.exports = {
       hash: {
         type: Sequelize.STRING
       },
+      keyword: {
+        type: Sequelize.STRING
+      },
       request: {
         type: Sequelize.TEXT
       },
@@ -21,8 +24,8 @@ module.exports = {
       target: {
         type: Sequelize.STRING
       },
-      date: {
-        type: Sequelize.DATE
+      status: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

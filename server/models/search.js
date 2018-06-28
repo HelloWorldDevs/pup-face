@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       unique: true
     },
-    lastrun: DataTypes.DATE
+    lastrun: DataTypes.DATE,
+    results: DataTypes.STRING
   }, {});
   search.associate = function(models) {
     // associations can be defined here
