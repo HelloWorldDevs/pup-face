@@ -12,7 +12,7 @@ module.exports = function autoScroll(page){
           clearInterval(timer);
           resolve();
         }
-      }, 200);
+      }, 100);
     })
   });
 };
