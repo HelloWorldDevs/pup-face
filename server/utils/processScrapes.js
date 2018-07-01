@@ -134,6 +134,10 @@ module.exports = async (hash) => {
       console.log(`Saving ${newAds.length} complete Ads to database`);
       await Ad.bulkCreate(newAds);
       console.log('Saving Complete');
+
+      console.log('Updating Scrape status to processed');
+      await Scrape.update({status: 'processed'}, {where: {hash: hash}});
+
       console.log('timeout in 5 seconds');
 
       setTimeout((function() {

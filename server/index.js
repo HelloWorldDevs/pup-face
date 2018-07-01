@@ -8,6 +8,7 @@ const sleep = require('./utils/sleep');
 const saveSearchToHistory = require('./utils/saveSearchToHistory');
 const shouldRunSearch = require('./utils/shouldRunSearch');
 const saveScrape = require('./utils/saveScrape');
+const processScrapes = require('./utils/processScrapes');
 
 (async () => {
 
@@ -87,6 +88,10 @@ const saveScrape = require('./utils/saveScrape');
   }
   console.log(`Scan Complete.`);
   console.timeEnd('Scrape Time');
+
+  console.log(`\nStarting Processing\n-----------------------------------`);
+  processScrapes(hash);
+
   console.log(`End Time: ${new Date()}`);
   await browser.close();
 
