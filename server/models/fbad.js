@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const fbad = sequelize.define('fbad', {
     archiveid: DataTypes.STRING,
+    scrapeid: DataTypes.STRING,
     keyword: DataTypes.STRING,
     date: DataTypes.DATEONLY,
     pagename: DataTypes.STRING,
