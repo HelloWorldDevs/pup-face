@@ -37,7 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     location7: DataTypes.STRING,
     location8: DataTypes.STRING,
     location9: DataTypes.STRING,
-    location10: DataTypes.STRING
+    location10: DataTypes.STRING,
+    pagesource: DataTypes.STRING,
+    insightsource: DataTypes.STRING
   }, {});
   fbad.associate = function(models) {
     // associations can be defined here

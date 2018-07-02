@@ -32,7 +32,8 @@ module.exports = async (hash) => {
             pagename: pageData.fields.page_name,
             sponsor: pageData.fields.byline === '' ? "No Sponsor" : pageData.fields.byline,
             posttext: striptags(pageData.fields.body.markup.__html).slice(0, 4000),
-            headline: pageData.fields.title
+            headline: pageData.fields.title,
+            pagesource: result.id
           };
         });
         return resolve(newAds);
@@ -63,6 +64,12 @@ module.exports = async (hash) => {
         return new Promise(async (resolve, reject) => {
           let payload = JSON.parse(result.response.slice(9)).payload;
           let results = payload.results;
+
+          // adds insight source to results
+          results = results.map(res => {
+            res.insightsource = result.id;
+            return res;
+          });
           return resolve(results);
         });
       });
@@ -123,7 +130,8 @@ module.exports = async (hash) => {
           location7: locations[6] || null,
           location8: locations[7] || null,
           location9: locations[8] || null,
-          location10: locations[9] || null
+          location10: locations[9] || null,
+          insightsource: insight.insightsource
         };
 
         Object.assign(pageData, newAdData);
