@@ -1,5 +1,9 @@
 const getHighLow = (raw) => {
   let impressions = raw.split(/[-<]/u);
+  // if '>1M', enter same value for high/low
+  if(raw.indexOf('>') >= 0) {
+    impressions[1] = impressions[0];
+  }
   return impressions.map(getNumber);
 };
 
