@@ -5,16 +5,19 @@ const Scrape = require('./models').scrape;
 
 (async () => {
 
-  Scrape.findAll({
+  return await Scrape.findAll({
     where: {
       status: 'new'
     }
-  }).then((data) => {
+  }).then(async (data) => {
     // console.log(data);
     let hashes = _.uniqBy(data, 'hash').map(d => d.hash);
-    console.log(hashes);
-    hashes.forEach(hash => {
-      process(hash);
+    console.log(`Processing data for scrape hashes:`);
+    console.log(hashes.join('\n'));
+    await hashes.forEach(async hash => {
+      await process(hash);
     });
+  }).then(() => {
+    console.log('Finished Processing.');
   });
 })();
