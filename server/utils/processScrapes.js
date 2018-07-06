@@ -82,9 +82,20 @@ module.exports = async (hash) => {
         return unique;
       });
     }).then( async insightData => {
-      // let missing = insightData.filter(u => master[u.adArchiveID] === undefined);
-      // console.log(missing.length);
-      insightData.forEach(insight => {
+      // Code to account for and print partial data to logs
+      let missing = insightData.filter(u => master[u.adArchiveID] === undefined && u.isActive);
+      if(missing.length > 0) {
+        console.log('\n----------------------------------------------');
+        console.log('Missing Pair Data to : ' + missing.length + ' active entries. Printing Raw data below');
+        console.log(JSON.stringify(missing));
+        console.log('----------------------------------------------\n');
+      }
+
+
+
+      // Note: Sometimes the scrape produces uneven data, where we have insight data but not page data. This
+      // appears to mostly happen when we scan really large pages, and mostly affects inactive status entries
+      insightData.filter(insight => master[insight.adArchiveID] !== undefined).forEach(insight => {
         let pageData = master[insight.adArchiveID];
         let impressions = getHighLow(insight["adInsightsInfo"]["impressions"]);
         let spending = getHighLow(insight["adInsightsInfo"]["spend"]);
