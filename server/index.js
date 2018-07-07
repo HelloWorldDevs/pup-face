@@ -89,8 +89,9 @@ const processScrapes = require('./utils/processScrapes');
   console.log(`Scan Complete.`);
   console.timeEnd('Scrape Time');
 
-  console.log(`\nStarting Processing\n-----------------------------------`);
-  processScrapes(hash);
+  // Code for running data processing. Fails here, not sure why. Set to run separately as a cron job for now
+  // console.log(`\nStarting Processing\n-----------------------------------`);
+  // processScrapes(hash);
 
   console.log(`End Time: ${new Date()}`);
   await browser.close();
