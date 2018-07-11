@@ -100,12 +100,16 @@ module.exports = async (hash) => {
         let impressions = getHighLow(insight["adInsightsInfo"]["impressions"]);
         let spending = getHighLow(insight["adInsightsInfo"]["spend"]);
 
-        let ageRange1 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '18-24');
-        let ageRange2 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '25-34');
-        let ageRange3 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '35-44');
-        let ageRange4 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '45-54');
-        let ageRange5 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '55-64');
-        let ageRange6 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '65+');
+        let ageRange1, ageRange2, ageRange3, ageRange4, ageRange5, ageRange6;
+        if(insight["adInsightsInfo"]["ageGenderData"]) {
+          ageRange1 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '18-24');
+          ageRange2 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '25-34');
+          ageRange3 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '35-44');
+          ageRange4 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '45-54');
+          ageRange5 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '55-64');
+          ageRange6 = insight["adInsightsInfo"]["ageGenderData"].find(d => d.age_range === '65+');
+        }
+
         let locations = [];
         if(insight["adInsightsInfo"]["locationData"]) {
           locations = insight["adInsightsInfo"]["locationData"].sort((a, b) => b.reach - a.reach)
