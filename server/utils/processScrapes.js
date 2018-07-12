@@ -62,15 +62,23 @@ module.exports = async (hash) => {
       // Loads insight results and pulls data
       let promises = results.map(async (result, index, arr) => {
         return new Promise(async (resolve, reject) => {
-          let payload = JSON.parse(result.response.slice(9)).payload;
-          let results = payload.results;
+          try {
+            let payload = JSON.parse(result.response.slice(9)).payload;
+            let results = payload.results;
 
-          // adds insight source to results
-          results = results.map(res => {
-            res.insightsource = result.id;
-            return res;
-          });
-          return resolve(results);
+            // adds insight source to results
+            results = results.map(res => {
+              res.insightsource = result.id;
+              return res;
+            });
+
+            return resolve(results);
+          } catch(e) {
+            console.log(`Cannot process data for scrape ${result.id}: ${e}`);
+            console.log(result);
+            resolve([]);
+          }
+
         });
       });
 
