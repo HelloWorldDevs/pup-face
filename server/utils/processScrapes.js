@@ -21,6 +21,7 @@ module.exports = async (hash) => {
     let promises = results.map(async (result) => {
       // return array of new ad data objects
       return new Promise(async (resolve) => {
+        // TODO: add error handling here like on the insight data
         let payload = JSON.parse(result.response.slice(9)).payload;
         let results = _.values(payload);
         let newAds = results.map(pageData => {
@@ -167,6 +168,7 @@ module.exports = async (hash) => {
       console.log('Saving Complete');
 
       console.log('Updating Scrape status to processed');
+      // TODO change this so we only update status for scrapes that were successfully processed. 
       await Scrape.update({status: 'processed'}, {where: {hash: hash}});
 
       console.log('timeout in 5 seconds');
