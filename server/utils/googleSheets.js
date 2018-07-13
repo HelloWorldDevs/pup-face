@@ -56,7 +56,7 @@ let getKeywords = async () => {
       const sheets = google.sheets({ version: 'v4', auth });
       sheets.spreadsheets.values.get({
         spreadsheetId: CRED.keywordSheetId,
-        range: 'B2:B100',
+        range: 'B2:B1000',
       }, (err, { data }) => {
         if (err) return console.log('The API returned an error: ' + err);
         const rows = data.values;
