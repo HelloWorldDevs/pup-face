@@ -1,3 +1,5 @@
+This is the read me from the original project. Look to the slack channel for install instructions for now.
+
 # pup-face
 A simple facebook example with Puppeteer:
 https://github.com/GoogleChrome/puppeteer
