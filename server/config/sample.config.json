@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "pup",
+    "password": "pup",
+    "database": "pup_face_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "pup",
+    "password": "pup",
+    "database": "pup_face_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "pup",
+    "password": "pup",
+    "database": "pup_face_prod",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
