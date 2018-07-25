@@ -125,6 +125,7 @@ const errorHandle = require("./utils/errorHandle");
     // save search term to history to prevent duplication
     saveSearchToHistory(currentKeyword, resultsText.toString());
     let results = await scrapePage(page, currentKeyword, hash);
+    debugger;
     await saveAds(results).catch(err =>
       errorHandle(err, "index.js saveAds() call")
     );

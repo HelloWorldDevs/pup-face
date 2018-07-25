@@ -1,6 +1,9 @@
 const errorHandle = require("./errorHandle");
 
 module.exports = async (page, currentKeyword) => {
+  // now in scrapePage
+  debugger;
+
   return await page
     .$$eval("a", (anchors, currentKeyword) => {
       // code within eval statements are run client-side
@@ -10,24 +13,14 @@ module.exports = async (page, currentKeyword) => {
         let results = anchors.filter(
           anchor => anchor.textContent === "See Ad Performance"
         );
+
         console.log(results.length + " results found");
         // open next window
         if (results.length) {
           // let getData = setInterval(() => {
-          results[current].click().catch(err => {
-            errorHandle(err, "scrapePage.js results[idx].click() call");
-            reject();
-          });
-          /*
-          Values returned here or the else clause go back to index.js into the
-          results variable near bottom of file.  That is what is passed to saveAds.js
-          which saves the results to the database as 'ads'
-          - Corey
-          */
-          return resolve(); // return value for saveAds() in index.js
+          results[current].click();
 
           /*
-
           We need to grab that data and save to database.
           Flow:
           1 load keyword page
