@@ -10,6 +10,8 @@ const shouldRunSearch = require("./utils/shouldRunSearch");
 const saveScrape = require("./utils/saveScrape");
 const processScrapes = require("./utils/processScrapes");
 
+const errorHandle = require("./utils/errorHandle");
+
 // see README.md for command line args
 
 (async () => {
@@ -18,8 +20,14 @@ const processScrapes = require("./utils/processScrapes");
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     devtools: false
   });
-  const keywords = await getKeywords();
-  // const keywords = ['vault'];
+
+  /* 
+  getKeywords() commented out for debug, this is how we get data from google sheets
+  just passing a single value for testing
+  - Corey
+  */
+  //const keywords = await getKeywords();
+  const keywords = ["dialysis"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
@@ -30,10 +38,20 @@ const processScrapes = require("./utils/processScrapes");
   page = await login(page);
   await page.setRequestInterception(true);
 
+  /*
+  page.on() adds listeners with puppeteer that grab any requests
+  or responses
+  */
   // This might be necessary to get results, not sure why
   page.on("request", request => {
     request.continue(); // pass it through.
   });
+
+  /*
+  the page.on("response") below **should** catch the requests
+  as well, haven't tested, not 100% sure of that
+  -Corey
+  */
 
   // Experimental method of intercepting Ajax call to get data directly
   // Triggers on every ajax response, filters by relevant results, saves to database
@@ -45,6 +63,11 @@ const processScrapes = require("./utils/processScrapes");
   // Loop over keywords, search, and scroll to bottom of each
   console.log(`\nSearching for Keywords:\n${keywords.join(", ")}\n`);
   let currentKeyword;
+  /*
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Main For Loop
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  */
   for (let k = 0; k < keywords.length; k++) {
     currentKeyword = keywords[k];
 
@@ -56,24 +79,27 @@ const processScrapes = require("./utils/processScrapes");
       );
       continue;
     }
-
     // Wait random lengths
     if (k !== 0) {
       let random = Math.floor(Math.random() * 5);
       console.log(`Waiting ${random} seconds`);
-      await sleep(random * 1000);
+      await sleep(random * 1000).catch(err =>
+        errorHandle(err, "index.js sleep() call")
+      );
     }
 
     // Open page for keyword search
     console.log(
       `\nSearching for [${currentKeyword}]\n-----------------------------------`
     );
-    await page.goto(
-      `https://www.facebook.com/politicalcontentads/?active_status=all&q=${currentKeyword}`,
-      {
-        waitUntil: "networkidle2"
-      }
-    );
+    await page
+      .goto(
+        `https://www.facebook.com/politicalcontentads/?active_status=all&q=${currentKeyword}`,
+        {
+          waitUntil: "networkidle2"
+        }
+      )
+      .catch(err => errorHandle(err, "index.js page.goto() call"));
 
     // Get result count and print to console. Stop loop if no results are found
     const resultsText = (await page.content()).match(/[~]?\d+\sresults/i);
@@ -86,12 +112,19 @@ const processScrapes = require("./utils/processScrapes");
       console.log(
         "Scrolling to load all results. This may take a while for many results."
       );
-      await autoScroll(page);
+      await autoScroll(page).catch(err =>
+        errorHandle(err, "index.js autoScroll() call")
+      );
     }
 
     // save search term to history to prevent duplication
     saveSearchToHistory(currentKeyword, resultsText.toString());
   }
+  /*
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  End Main For Loop
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  */
   console.log(`Scan Complete.`);
   console.timeEnd("Scrape Time");
 
