@@ -20,11 +20,7 @@ module.exports = (response, { currentKeyword, hash }) => {
     url.indexOf(`https://www.facebook.com/politicalcontentads/ads/?q=`) >= 0
   ) {
     target = "insightData";
-  } else if (
-    url.indexOf(
-      "https://www.facebook.com/ads/political_ad_archive/creative_snapshot/?ids[0"
-    ) >= 0
-  ) {
+  } else if (url.indexOf("https://www.facebook.com/adlibrary/") >= 0) {
     target = "pageData";
   } else {
     return;
