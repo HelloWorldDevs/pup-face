@@ -1,16 +1,55 @@
-module.exports = async (page, currentKeyword, ids) => {
-  return await page.$$eval('a', (anchors, currentKeyword, ids) => {
-    // code within eval statements are run client-side
-    return new Promise((resolve, reject) => {
-      console.log(ids);
-      let current = 0;
-      let values = [];
-      let results = anchors.filter(anchor => anchor.textContent === 'See Ad Performance');
-      console.log(results.length + ' results found');
-      // open next window
-      if(results.length) {
-        let getData = setInterval(() => {
-          results[current].click();
+const errorHandle = require("./errorHandle");
+
+module.exports = async (page, currentKeyword) => {
+  return await page
+    .$$eval("a", (anchors, currentKeyword) => {
+      // code within eval statements are run client-side
+      return new Promise((resolve, reject) => {
+        let current = 0;
+        let values = [];
+        let results = anchors.filter(
+          anchor => anchor.textContent === "See Ad Performance"
+        );
+        console.log(results.length + " results found");
+        // open next window
+        if (results.length) {
+          // let getData = setInterval(() => {
+          results[current].click().catch(err => {
+            errorHandle(err, "scrapePage.js results[idx].click() call");
+            reject();
+          });
+          /*
+          Values returned here or the else clause go back to index.js into the
+          results variable near bottom of file.  That is what is passed to saveAds.js
+          which saves the results to the database as 'ads'
+          - Corey
+          */
+          return resolve(); // return value for saveAds() in index.js
+
+          /*
+
+          We need to grab that data and save to database.
+          Flow:
+          1 load keyword page
+          2 scroll to bottom to force all html to load
+          3 run page.$$eval('a') to get array of anchors
+          4 filter that array for 'See Ad Performance' textContent
+          5 run async loop, repeats for every 'See Ad Performance' anchor:
+              > click anchor
+              > wait for response data
+              > parse body
+              > save body to database
+              > close modal
+
+          ------------------------------------------
+
+          COMMENTED OUT OLD METHOD OF SCRAPING HTML
+          ===============================================================================
+          Shouldn't need to do this anymore, when we click the 'See Ad Performance' anchor
+          there is a req/res from the server that contains all the insight data we want.
+          - Corey
+          ===============================================================================
+          // OLD METHOD
           // queries
           let modal = '.uiLayer > div:nth-child(2) > div button + div + div > div > div';
 
@@ -59,10 +98,11 @@ module.exports = async (page, currentKeyword, ids) => {
             console.log(`Scraping ${current}/${results.length}`);
           }
         }, 200);
-      } else {
-        return resolve(values);
-      }
-
-    });
-  }, currentKeyword, ids);
+        */
+        } else {
+          return resolve(values);
+        }
+      });
+    })
+    .catch(err => errorHandle(err, "scrapePage.js page.$$eval() call"));
 };

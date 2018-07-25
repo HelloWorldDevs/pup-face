@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 const googleSheets = require("./utils/googleSheets");
-const getKeywords = googleSheets.getKeywords;
+//const getKeywords = googleSheets.getKeywords;
 const crypto = require("crypto");
 const login = require("./utils/login");
 const autoScroll = require("./utils/autoScroll");
@@ -8,7 +8,9 @@ const sleep = require("./utils/sleep");
 const saveSearchToHistory = require("./utils/saveSearchToHistory");
 const shouldRunSearch = require("./utils/shouldRunSearch");
 const saveScrape = require("./utils/saveScrape");
-const processScrapes = require("./utils/processScrapes");
+//const processScrapes = require("./utils/processScrapes");
+const saveAds = require("./utils/saveAds");
+const scrapePage = require("./utils/scrapePage");
 
 const errorHandle = require("./utils/errorHandle");
 
@@ -16,7 +18,7 @@ const errorHandle = require("./utils/errorHandle");
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     devtools: false
   });
@@ -27,7 +29,7 @@ const errorHandle = require("./utils/errorHandle");
   - Corey
   */
   //const keywords = await getKeywords();
-  const keywords = ["dialysis"];
+  const keywords = ["tigard"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
@@ -72,13 +74,16 @@ const errorHandle = require("./utils/errorHandle");
     currentKeyword = keywords[k];
 
     // Check search history and skip keyword if it has run already today.
-    let shouldRun = await shouldRunSearch(currentKeyword);
-    if (!shouldRun) {
-      console.log(
-        `Search for [${currentKeyword}] already ran today. Skipping.`
-      );
-      continue;
-    }
+    // ############################################################
+    // Removed for debug -Corey
+    // ############################################################
+    // let shouldRun = await shouldRunSearch(currentKeyword);
+    // if (!shouldRun) {
+    //   console.log(
+    //     `Search for [${currentKeyword}] already ran today. Skipping.`
+    //   );
+    //   continue;
+    // }
     // Wait random lengths
     if (k !== 0) {
       let random = Math.floor(Math.random() * 5);
@@ -119,6 +124,10 @@ const errorHandle = require("./utils/errorHandle");
 
     // save search term to history to prevent duplication
     saveSearchToHistory(currentKeyword, resultsText.toString());
+    let results = await scrapePage(page, currentKeyword, hash);
+    await saveAds(results).catch(err =>
+      errorHandle(err, "index.js saveAds() call")
+    );
   }
   /*
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
