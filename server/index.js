@@ -14,6 +14,8 @@ const scrapePage = require("./utils/scrapePage");
 
 const errorHandle = require("./utils/errorHandle");
 
+const clickAllModals = require("./utils/clickAllModals");
+
 // see README.md for command line args
 
 (async () => {
@@ -29,7 +31,7 @@ const errorHandle = require("./utils/errorHandle");
   - Corey
   */
   //const keywords = await getKeywords();
-  const keywords = ["tigard"]; //["yes on 22"];
+  const keywords = ["yes on 23"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
@@ -121,7 +123,8 @@ const errorHandle = require("./utils/errorHandle");
         errorHandle(err, "index.js autoScroll() call")
       );
     }
-    await scrapePage(page, currentKeyword, hash);
+    await clickAllModals(page, currentKeyword, hash);
+    // await scrapePage(page, currentKeyword, hash);
     // save search term to history to prevent duplication
     saveSearchToHistory(currentKeyword, resultsText.toString());
     //let results = await scrapePage(page, currentKeyword, hash);

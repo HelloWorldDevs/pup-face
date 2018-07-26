@@ -17,12 +17,14 @@ module.exports = async (page, currentKeyword) => {
     added, model is in models).
     - Corey
     */
-  await page
+  return await page
     .$$eval("a", (anchors, currentKeyword) => {
       return new Promise((res, rej) => {
         let targets = anchors.filter(
           a => a.textContent === "See Ad Performance"
         );
+
+        console.log(`NUMBER OF ANCHORS: ${targets.length}`);
 
         targets
           .reduce(
@@ -35,7 +37,7 @@ module.exports = async (page, currentKeyword) => {
                       setTimeout(() => {
                         targets[i].click();
                         resolve();
-                      }, 1000);
+                      }, 50);
                     })
                 )
                 .catch(err => {
@@ -50,9 +52,11 @@ module.exports = async (page, currentKeyword) => {
       });
     })
     .catch(err => errorHandle(err, "scrapePage.js page.$$eval() call"));
-  await page
-    .waitForNavigation({ waitUntil: "networkidle2" })
-    .catch(err =>
-      errorHandle(err, "scrapePage.js page.waitForNavigation() call")
-    );
+
+  // if below uncommented, it clicks modals til 30s
+  //await page
+  //  .waitForNavigation({ waitUntil: "networkidle2" })
+  //  .catch(err =>
+  //    errorHandle(err, "scrapePage.js page.waitForNavigation() call")
+  //  );
 };
