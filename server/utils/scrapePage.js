@@ -1,12 +1,64 @@
+const Insight = require("../models").insight;
 const errorHandle = require("./errorHandle");
 
 module.exports = async (page, currentKeyword) => {
-  // now in scrapePage
-  debugger;
+  //await page.setRequestInterception(true);
+  //page.on("request", request => {
+  //  request.continue(); // pass it through.
+  //});
+  /*
+  Save to database as insight
 
-  return await page
+  This was working as long as I had no timeout limit on await page.waitfornetwork
+  */
+  //page.on("response", res => {
+  //  let url = res.request().url();
+  //  res.text().then(function(textBody) {
+  //    if (
+  //      url.indexOf("https://www.facebook.com/adlibrary/async/insights/") >= 0
+  //    ) {
+  //      let insightData = {
+  //        keyword: currentKeyword,
+  //        date: new Date(),
+  //        response: textBody.substring(9)
+  //      };
+  //      Insight.create(insightData);
+  //    }
+  //  });
+  //});
+
+  await page
     .$$eval("a", (anchors, currentKeyword) => {
-      // code within eval statements are run client-side
+      return new Promise((res, rej) => {
+        let targets = anchors.filter(
+          a => a.textContent === "See Ad Performance"
+        );
+
+        targets
+          .reduce(
+            (prom, _, i) =>
+              prom
+                .then(
+                  _ =>
+                    new Promise(
+                      resolve => {
+                        //setTimeout(() => {
+                        targets[i].click();
+                        resolve();
+                      }
+                      // }, 1000)
+                    )
+                )
+                .catch(err => {
+                  errorHandle(err, "scrapePage.js targets.reduce() call");
+                  rej();
+                }),
+            Promise.resolve()
+          )
+          .then(() => res());
+
+        // code within eval statements are run client-side
+        /*
       return new Promise((resolve, reject) => {
         let current = 0;
         let values = [];
@@ -19,8 +71,8 @@ module.exports = async (page, currentKeyword) => {
         if (results.length) {
           // let getData = setInterval(() => {
           results[current].click();
-
-          /*
+          */
+        /*
           We need to grab that data and save to database.
           Flow:
           1 load keyword page
@@ -91,11 +143,19 @@ module.exports = async (page, currentKeyword) => {
             console.log(`Scraping ${current}/${results.length}`);
           }
         }, 200);
-        */
         } else {
           return resolve(values);
         }
       });
+      */
+      }).catch(err => {
+        errorHandle(err, "scrapePage internal promise");
+      });
     })
     .catch(err => errorHandle(err, "scrapePage.js page.$$eval() call"));
+  await page
+    .waitForNavigation({ waitUntil: "networkidle2" })
+    .catch(err =>
+      errorHandle(err, "scrapePage.js page.waitForNavigation() call")
+    );
 };

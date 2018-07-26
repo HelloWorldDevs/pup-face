@@ -1,4 +1,5 @@
 const Scrape = require("../models").scrape;
+const Insight = require("../models").insight;
 const errorHandle = require("./errorHandle");
 
 // Experimental method of intercepting Ajax call to get data directly
@@ -16,9 +17,7 @@ module.exports = (response, { currentKeyword, hash }) => {
   const req = response.request();
   let url = req.url();
   let target;
-  if (
-    url.indexOf(`https://www.facebook.com/politicalcontentads/ads/?q=`) >= 0
-  ) {
+  if (url.indexOf(`https://www.facebook.com/adlibrary/async/insights/`) >= 0) {
     target = "insightData";
   } else if (url.indexOf("https://www.facebook.com/adlibrary/") >= 0) {
     target = "pageData";
@@ -34,16 +33,24 @@ module.exports = (response, { currentKeyword, hash }) => {
       console.log(
         `saving ajax response for keyword [${currentKeyword}] and target [${target}]`
       );
-      let scrapeData = {
-        hash: hash,
-        keyword: currentKeyword,
-        request: url,
-        response: textBody,
-        target,
-        status: "new"
-      };
-
-      Scrape.create(scrapeData);
+      if (target === "insightData") {
+        let insightData = {
+          keyword: currentKeyword,
+          date: new Date(),
+          response: textBody.substring(9)
+        };
+        Insight.create(insightData);
+      } else if (target === "pageData") {
+        let scrapeData = {
+          hash: hash,
+          keyword: currentKeyword,
+          request: url,
+          response: textBody,
+          target,
+          status: "new"
+        };
+        Scrape.create(scrapeData);
+      }
     })
     .catch(err => errorHandle(err, "saveScrape.js response.text() call"));
 };

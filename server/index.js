@@ -20,7 +20,7 @@ const errorHandle = require("./utils/errorHandle");
   const browser = await puppeteer.launch({
     headless: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    devtools: false
+    devtools: true
   });
 
   /* 
@@ -29,7 +29,7 @@ const errorHandle = require("./utils/errorHandle");
   - Corey
   */
   //const keywords = await getKeywords();
-  const keywords = ["tigard"];
+  const keywords = ["tigard"]; //["yes on 22"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
@@ -121,14 +121,14 @@ const errorHandle = require("./utils/errorHandle");
         errorHandle(err, "index.js autoScroll() call")
       );
     }
-
+    await scrapePage(page, currentKeyword, hash);
     // save search term to history to prevent duplication
     saveSearchToHistory(currentKeyword, resultsText.toString());
-    let results = await scrapePage(page, currentKeyword, hash);
+    //let results = await scrapePage(page, currentKeyword, hash);
     debugger;
-    await saveAds(results).catch(err =>
-      errorHandle(err, "index.js saveAds() call")
-    );
+    //await saveAds(results).catch(err =>
+    //  errorHandle(err, "index.js saveAds() call")
+    //);
   }
   /*
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
