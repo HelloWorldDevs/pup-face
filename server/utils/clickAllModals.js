@@ -24,8 +24,6 @@ module.exports = async (page, currentKeyword) => {
           a => a.textContent === "See Ad Performance"
         );
 
-        console.log(`NUMBER OF ANCHORS: ${targets.length}`);
-
         targets
           .reduce(
             (prom, _, i) =>

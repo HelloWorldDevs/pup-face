@@ -22,7 +22,7 @@ const clickAllModals = require("./utils/clickAllModals");
   const browser = await puppeteer.launch({
     headless: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    devtools: true
+    devtools: false
   });
 
   /* 
