@@ -30,8 +30,6 @@ module.exports = (response, { currentKeyword, hash }) => {
     return;
   }
 
-  debugger;
-
   response
     .text()
     .then(function(textBody) {

@@ -20,7 +20,11 @@ module.exports = async (page, currentKeyword) => {
 
   return await page
     .$$eval("a", (anchors, currentKeyword, page) => {
-      let targets = anchors.filter(a => a.textContent === "See Ad Performance");
+      let targets = anchors.filter(
+        a =>
+          a.textContent === "See Ad Performance" ||
+          a.textContent === "Uncover Ad & See Ad Performance"
+      );
       return new Promise((res, rej) => {
         targets
           .reduce(
@@ -30,8 +34,13 @@ module.exports = async (page, currentKeyword) => {
                   return new Promise(resolve => {
                     targets[i].click();
                     setTimeout(() => {
+                      let child = document.getElementsByClassName("uiLayer")[0];
+                      console.log(child);
+                      document
+                        .getElementsByTagName("body")[0]
+                        .removeChild(child);
                       resolve();
-                    }, 150);
+                    }, 300);
                   });
                 })
                 .catch(err => {
@@ -46,11 +55,4 @@ module.exports = async (page, currentKeyword) => {
       });
     })
     .catch(err => errorHandle(err, "scrapePage.js page.$$eval() call"));
-
-  // if below uncommented, it clicks modals til 30s
-  //await page
-  //  .waitForNavigation({ waitUntil: "networkidle2" })
-  //  .catch(err =>
-  //    errorHandle(err, "scrapePage.js page.waitForNavigation() call")
-  //  );
 };
