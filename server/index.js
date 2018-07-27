@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 const googleSheets = require("./utils/googleSheets");
-//const getKeywords = googleSheets.getKeywords;
+const getKeywords = googleSheets.getKeywords;
 const crypto = require("crypto");
 const login = require("./utils/login");
 const autoScroll = require("./utils/autoScroll");
@@ -20,7 +20,7 @@ const clickAllModals = require("./utils/clickAllModals");
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     devtools: false
   });
@@ -30,8 +30,7 @@ const clickAllModals = require("./utils/clickAllModals");
   just passing a single value for testing
   - Corey
   */
-  //const keywords = await getKeywords();
-  const keywords = ["yes on 46"];
+  const keywords = await getKeywords();
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
