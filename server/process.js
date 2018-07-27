@@ -12,12 +12,22 @@ const query = cmdLineFlags(args);
     where: query
   })
     .then(async data => {
-      let hashes = _.uniqBy(data, "hash").map(d => d.hash);
+      let archiveIds = [];
+      data.forEach(obj => {
+        if (obj.target === "pageData") {
+          let json = JSON.parse(obj.response.slice(9)).payload.results;
+          json.map(d => archiveIds.push(d.adArchiveID));
+        }
+      });
+      //let allPageData = [].concat.apply([], page_data);
+      return { data, archiveIds };
+    })
+    .then(async dataObj => {
+      let hashes = _.uniqBy(dataObj.data, "hash").map(d => d.hash);
       console.log(`Processing data for scrape hashes:`);
       console.log(hashes.join("\n"));
-      debugger;
       await hashes.forEach(async hash => {
-        await processScrapes(hash);
+        await processScrapes(hash, dataObj.archiveIds);
       });
     })
     .then(() => {
