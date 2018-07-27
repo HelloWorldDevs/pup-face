@@ -25,22 +25,22 @@ module.exports = async (hash, archiveIds) => {
           // TODO: add error handling here like on the insight data
           let payload = JSON.parse(result.response.slice(9)).payload;
           let results = _.values(payload);
-          let newAds = results.map(pageData => {
+          let newAds = results[4].map(pageData => {
             return {
               archiveid: pageData.adArchiveID,
               scrapeid: result.hash,
               keyword: result.keyword,
               date: result.createdAt,
-              pagename: pageData.fields.page_name,
+              pagename: pageData.pageName,
               sponsor:
-                pageData.fields.byline === ""
+                pageData.snapshot.byline === ""
                   ? "No Sponsor"
-                  : pageData.fields.byline,
-              posttext: striptags(pageData.fields.body.markup.__html).slice(
+                  : pageData.snapshot.byline,
+              posttext: striptags(pageData.snapshot.body.markup.__html).slice(
                 0,
                 4000
               ),
-              headline: pageData.fields.title,
+              headline: pageData.snapshot.title,
               pagesource: result.id
             };
           });
@@ -70,23 +70,36 @@ module.exports = async (hash, archiveIds) => {
         .then(async results => {
           // Loads insight results and pulls data
           let promises = results.map(async (result, index, arr) => {
+            let payload = JSON.parse(result.dataValues.response.slice(9))
+              .payload;
+
+            console.log(payload);
+            debugger;
+
             return new Promise(async (resolve, reject) => {
               try {
-                let payload = JSON.parse(result.response.slice(9)).payload;
-                let results = payload.results;
+                let payload = JSON.parse(result.dataValues.response.slice(9))
+                  .payload;
+
+                /* 
+                Items commented below do not exist in the insight data as of 
+                7/27/18
+                - Corey
+                */
+                //let results = payload.results;
 
                 // adds insight source to results
-                results = results.map(res => {
-                  res.insightsource = result.id;
-                  return res;
-                });
+                //results = results.map(res => {
+                //  res.insightsource = result.id;
+                //  debugger;
+                //  return res;
+                //});
 
-                return resolve(results);
+                return resolve(payload);
               } catch (e) {
                 console.log(
                   `Cannot process data for scrape ${result.id}: ${e}`
                 );
-                console.log(result);
                 resolve([]);
               }
             });
@@ -95,9 +108,14 @@ module.exports = async (hash, archiveIds) => {
           // Get unique results for insight data
           return Promise.all(promises).then(async data => {
             let newAds = _.flatten(data);
-            let unique = _.uniqBy(newAds, "adArchiveID");
-            console.log(`Found ${unique.length} unique insight data objects`);
-            return unique;
+            let unique = _.uniqBy(newAds, "ageGenderData");
+            console.log(newAds.length);
+            console.log(unique.length);
+            console.log(unique);
+            debugger;
+            // adArchiveID not on insight data as of 7/27/18
+            // let unique = _.uniqBy(newAds, "adArchiveID");
+            return newAds; //was returning unique, swapped since non-existant;
           });
         })
         .then(async insightData => {

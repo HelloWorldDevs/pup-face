@@ -14,6 +14,9 @@ module.exports = cmdArgs => {
     case "-k":
       return queries.keywordQuery(cmdArgs.slice(3).join(" "));
     default:
-      break;
+      console.log("hit and shouldnt");
+      return {
+        status: "new"
+      };
   }
 };

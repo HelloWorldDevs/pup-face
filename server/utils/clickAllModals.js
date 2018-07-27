@@ -25,32 +25,38 @@ module.exports = async (page, currentKeyword) => {
           a.textContent === "Uncover Ad & See Ad Performance"
       );
       return new Promise((res, rej) => {
+        /*
+        Where the fun begins.
+        Need to loop over all the anchors we filtered above, but async.  Using
+        reduce() we get a return value to the accumulator every pass, and we
+        give the 'initial argument' of reduce to pass in a resolved promise to
+        start things off, so the accumulator is repeatedly received a resolved
+        promise.  We can then immediately .then() and kick off a promise
+        chain for the loop.  Essentially the reduce function is just chaining a 
+        bunch of .then() for the length of the targets array.
+        */
         targets
-          .reduce(
-            (prom, _, i) =>
-              prom
-                .then(_ => {
-                  return new Promise(resolve => {
-                    targets[i].click();
-                    setTimeout(() => {
-                      let child = document.getElementsByClassName("uiLayer")[0];
-                      document
-                        .getElementsByTagName("body")[0]
-                        .removeChild(child);
-                      resolve();
-                    }, 300);
-                  });
-                })
-                .catch(err => {
-                  errorHandle(err, "scrapePage.js targets.reduce() call");
-                  rej();
-                }),
-            Promise.resolve()
-          )
-          .then(() => res());
+          .reduce((prom, _, idx) => {
+            return prom
+              .then(_ => {
+                return new Promise(resolve => {
+                  targets[idx].click();
+                  setTimeout(() => {
+                    let child = document.getElementsByClassName("uiLayer")[0];
+                    document.getElementsByTagName("body")[0].removeChild(child);
+                    resolve();
+                  }, 300);
+                });
+              })
+              .catch(err => {
+                errorHandle(err, "scrapePage.js targets.reduce() call");
+                rej();
+              });
+          }, Promise.resolve()) //INITIAL ARGUMENT PASSED TO REDUCE
+          .then(() => res()); // resolve the promise on line 27 and exit the function once reduce is done
       }).catch(err => {
-        errorHandle(err, "scrapePage internal promise");
+        errorHandle(err, "scrapePage internal promise"); // catch for return promise
       });
     })
-    .catch(err => errorHandle(err, "scrapePage.js page.$$eval() call"));
+    .catch(err => errorHandle(err, "scrapePage.js page.$$eval() call")); // catch for puppeteer $$eval
 };
