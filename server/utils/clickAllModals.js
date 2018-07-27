@@ -1,4 +1,3 @@
-const Insight = require("../models").insight;
 const errorHandle = require("./errorHandle");
 
 module.exports = async (page, currentKeyword) => {
@@ -35,7 +34,6 @@ module.exports = async (page, currentKeyword) => {
                     targets[i].click();
                     setTimeout(() => {
                       let child = document.getElementsByClassName("uiLayer")[0];
-                      console.log(child);
                       document
                         .getElementsByTagName("body")[0]
                         .removeChild(child);

@@ -20,7 +20,7 @@ const clickAllModals = require("./utils/clickAllModals");
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     devtools: false
   });
@@ -31,7 +31,7 @@ const clickAllModals = require("./utils/clickAllModals");
   - Corey
   */
   //const keywords = await getKeywords();
-  const keywords = ["tigard"];
+  const keywords = ["yes on 46"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
