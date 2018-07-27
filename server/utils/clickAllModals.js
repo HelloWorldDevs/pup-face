@@ -17,27 +17,23 @@ module.exports = async (page, currentKeyword) => {
     added, model is in models).
     - Corey
     */
-  return await page
-    .$$eval("a", (anchors, currentKeyword) => {
-      return new Promise((res, rej) => {
-        let targets = anchors.filter(
-          a => a.textContent === "See Ad Performance"
-        );
 
+  return await page
+    .$$eval("a", (anchors, currentKeyword, page) => {
+      let targets = anchors.filter(a => a.textContent === "See Ad Performance");
+      return new Promise((res, rej) => {
         targets
           .reduce(
             (prom, _, i) =>
               prom
-                .then(
-                  _ =>
-                    new Promise(resolve => {
-                      // using this to give modal a second to open
-                      setTimeout(() => {
-                        targets[i].click();
-                        resolve();
-                      }, 50);
-                    })
-                )
+                .then(_ => {
+                  return new Promise(resolve => {
+                    targets[i].click();
+                    setTimeout(() => {
+                      resolve();
+                    }, 150);
+                  });
+                })
                 .catch(err => {
                   errorHandle(err, "scrapePage.js targets.reduce() call");
                   rej();

@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       keyword: DataTypes.TEXT,
       date: DataTypes.DATEONLY,
-      response: DataTypes.TEXT
+      response: DataTypes.TEXT,
+      hash: DataTypes.TEXT
     },
     {}
   );

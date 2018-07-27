@@ -20,7 +20,7 @@ const clickAllModals = require("./utils/clickAllModals");
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     devtools: false
   });
@@ -31,7 +31,7 @@ const clickAllModals = require("./utils/clickAllModals");
   - Corey
   */
   //const keywords = await getKeywords();
-  const keywords = ["yes on 23"];
+  const keywords = ["jon tester"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
@@ -101,7 +101,7 @@ const clickAllModals = require("./utils/clickAllModals");
     );
     await page
       .goto(
-        `https://www.facebook.com/politicalcontentads/?active_status=all&q=${currentKeyword}`,
+        `https://www.facebook.com/ads/archive/?active_status=all&ad_type=ads-with-political-content&q=${currentKeyword}`,
         {
           waitUntil: "networkidle2"
         }

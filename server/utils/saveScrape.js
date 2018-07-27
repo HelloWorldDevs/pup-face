@@ -17,9 +17,14 @@ module.exports = (response, { currentKeyword, hash }) => {
   const req = response.request();
   let url = req.url();
   let target;
-  if (url.indexOf(`https://www.facebook.com/adlibrary/async/insights/`) >= 0) {
+
+  if (
+    url.indexOf("https://www.facebook.com/ads/archive/async/insights") !== -1
+  ) {
     target = "insightData";
-  } else if (url.indexOf("https://www.facebook.com/adlibrary/") >= 0) {
+  } else if (
+    url.indexOf("https://www.facebook.com/ads/archive/async/search_ads") !== -1
+  ) {
     target = "pageData";
   } else {
     return;
@@ -35,6 +40,7 @@ module.exports = (response, { currentKeyword, hash }) => {
       );
       if (target === "insightData") {
         let insightData = {
+          hash: hash,
           keyword: currentKeyword,
           date: new Date(),
           response: textBody.substring(9)
