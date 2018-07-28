@@ -12,14 +12,32 @@ const query = cmdLineFlags(args);
     where: query
   })
     .then(async data => {
-      let archiveIds = [];
+      let adsByKeyword = {};
+      let archiveIds = {};
       data.forEach(obj => {
         if (obj.target === "pageData") {
           let json = JSON.parse(obj.response.slice(9)).payload.results;
-          json.map(d => archiveIds.push(d.adArchiveID));
+
+          if (obj.keyword in adsByKeyword) {
+            let combined = adsByKeyword[obj.keyword].concat(json);
+            adsByKeyword[obj.keyword] = combined;
+          } else {
+            adsByKeyword[obj.keyword] = json;
+          }
         }
       });
-      //let allPageData = [].concat.apply([], page_data);
+
+      for (keyword in adsByKeyword) {
+        archiveIds[keyword] = [];
+        adsByKeyword[keyword].forEach(el =>
+          archiveIds[keyword].push({
+            startDate: el.startDate,
+            endDate: el.endDate,
+            adArchiveID: el.adArchiveID
+          })
+        );
+      }
+
       return { data, archiveIds };
     })
     .then(async dataObj => {

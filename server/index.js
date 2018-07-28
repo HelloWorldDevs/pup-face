@@ -31,7 +31,7 @@ const clickAllModals = require("./utils/clickAllModals");
   - Corey
   */
   //const keywords = await getKeywords();
-  const keywords = ["tigard"];
+  const keywords = ["tigard", "yes on 46", "sherwood"];
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);

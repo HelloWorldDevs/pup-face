@@ -12,7 +12,7 @@ module.exports = async (hash, archiveIds) => {
 
   return await Scrape.findAll({
     where: {
-      status: "new",
+      //status: "new",
       target: "pageData",
       hash: hash
     }
@@ -62,30 +62,49 @@ module.exports = async (hash, archiveIds) => {
       console.log("First pass complete. Loading Insight data");
       return Scrape.findAll({
         where: {
-          status: "new",
+          //status: "new",
           target: "insightData",
           hash: hash
         }
       })
         .then(async results => {
           // Loads insight results and pulls data
+
           let promises = results.map(async (result, index, arr) => {
-            let payload = JSON.parse(result.dataValues.response.slice(9))
-              .payload;
-
-            console.log(payload);
-            debugger;
-
             return new Promise(async (resolve, reject) => {
               try {
-                let payload = JSON.parse(result.dataValues.response.slice(9))
-                  .payload;
+                /* 
+                Grab insight ID from pageData and match to insightData.
+                ------------------------------------------------------------
+                This is necessary as Facebook changed it's data structure and
+                now the ad ids and dates are listed on page data, but nothing 
+                is on the individual insight;
+
+                The pageData lists the adArchiveIDs in the same order they're 
+                collected and recorded in the insight data scrape.  So we can
+                just match them up by array index (archiveIds imported from
+                process.js is same order as insightData ads)
+                */
+                let insights = results.map(
+                  obj => JSON.parse(obj.dataValues.response.slice(9)).payload
+                );
+                insights.forEach(el => console.log(el.keyword));
+                debugger;
+                let insightsWithId = insights.map((obj, idx) => {
+                  return {
+                    ...obj,
+                    adArchiveID: archiveIds[idx].adArchiveID,
+                    startDate: archiveIds[idx].start,
+                    endDate: archiveIds[idx].end
+                  };
+                });
 
                 /* 
                 Items commented below do not exist in the insight data as of 
                 7/27/18
                 - Corey
                 */
+
                 //let results = payload.results;
 
                 // adds insight source to results
@@ -95,7 +114,7 @@ module.exports = async (hash, archiveIds) => {
                 //  return res;
                 //});
 
-                return resolve(payload);
+                return resolve(insightsWithId);
               } catch (e) {
                 console.log(
                   `Cannot process data for scrape ${result.id}: ${e}`
@@ -108,14 +127,8 @@ module.exports = async (hash, archiveIds) => {
           // Get unique results for insight data
           return Promise.all(promises).then(async data => {
             let newAds = _.flatten(data);
-            let unique = _.uniqBy(newAds, "ageGenderData");
-            console.log(newAds.length);
-            console.log(unique.length);
-            console.log(unique);
-            debugger;
-            // adArchiveID not on insight data as of 7/27/18
-            // let unique = _.uniqBy(newAds, "adArchiveID");
-            return newAds; //was returning unique, swapped since non-existant;
+            let unique = _.uniqBy(newAds, "adArchiveID");
+            return unique;
           });
         })
         .then(async insightData => {
@@ -140,10 +153,8 @@ module.exports = async (hash, archiveIds) => {
             .filter(insight => master[insight.adArchiveID] !== undefined)
             .forEach(insight => {
               let pageData = master[insight.adArchiveID];
-              let impressions = getHighLow(
-                insight["adInsightsInfo"]["impressions"]
-              );
-              let spending = getHighLow(insight["adInsightsInfo"]["spend"]);
+              let impressions = getHighLow(insight["impressions"]);
+              let spending = getHighLow(insight["spend"]);
 
               let ageRange1,
                 ageRange2,
@@ -151,30 +162,30 @@ module.exports = async (hash, archiveIds) => {
                 ageRange4,
                 ageRange5,
                 ageRange6;
-              if (insight["adInsightsInfo"]["ageGenderData"]) {
-                ageRange1 = insight["adInsightsInfo"]["ageGenderData"].find(
+              if (insight["ageGenderData"]) {
+                ageRange1 = insight["ageGenderData"].find(
                   d => d.age_range === "18-24"
                 );
-                ageRange2 = insight["adInsightsInfo"]["ageGenderData"].find(
+                ageRange2 = insight["ageGenderData"].find(
                   d => d.age_range === "25-34"
                 );
-                ageRange3 = insight["adInsightsInfo"]["ageGenderData"].find(
+                ageRange3 = insight["ageGenderData"].find(
                   d => d.age_range === "35-44"
                 );
-                ageRange4 = insight["adInsightsInfo"]["ageGenderData"].find(
+                ageRange4 = insight["ageGenderData"].find(
                   d => d.age_range === "45-54"
                 );
-                ageRange5 = insight["adInsightsInfo"]["ageGenderData"].find(
+                ageRange5 = insight["ageGenderData"].find(
                   d => d.age_range === "55-64"
                 );
-                ageRange6 = insight["adInsightsInfo"]["ageGenderData"].find(
+                ageRange6 = insight["ageGenderData"].find(
                   d => d.age_range === "65+"
                 );
               }
 
               let locations = [];
-              if (insight["adInsightsInfo"]["locationData"]) {
-                locations = insight["adInsightsInfo"]["locationData"]
+              if (insight["locationData"]) {
+                locations = insight["locationData"]
                   .sort((a, b) => b.reach - a.reach)
                   .filter(l => l.reach !== 0)
                   .map(l => l.region);
