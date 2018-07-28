@@ -35,6 +35,10 @@ module.exports = async (page, currentKeyword) => {
         chain for the loop.  Essentially the reduce function is just chaining a 
         bunch of .then() for the length of the targets array.
         */
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
         targets
           .reduce((prom, _, idx) => {
             return prom
@@ -42,10 +46,12 @@ module.exports = async (page, currentKeyword) => {
                 return new Promise(resolve => {
                   targets[idx].click();
                   setTimeout(() => {
-                    let child = document.getElementsByClassName("uiLayer")[0];
-                    document.getElementsByTagName("body")[0].removeChild(child);
+                    let popup = document.querySelector(".uiLayer");
+                    popup.parentNode.removeChild(popup);
+                  }, 20);
+                  setTimeout(() => {
                     resolve();
-                  }, 300);
+                  }, 2000);
                 });
               })
               .catch(err => {

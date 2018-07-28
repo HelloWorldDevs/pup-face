@@ -1,14 +1,14 @@
 const puppeteer = require("puppeteer");
-//const googleSheets = require("./utils/googleSheets");
-//const getKeywords = googleSheets.getKeywords;
+const googleSheets = require("./utils/googleSheets");
+const getKeywords = googleSheets.getKeywords;
 const crypto = require("crypto");
 const login = require("./utils/login");
 const autoScroll = require("./utils/autoScroll");
 const sleep = require("./utils/sleep");
 const saveSearchToHistory = require("./utils/saveSearchToHistory");
 const shouldRunSearch = require("./utils/shouldRunSearch");
-const saveScrape = require("./utils/saveScrape");
-//const processScrapes = require("./utils/processScrapes");
+const saveScrapeClosure = require("./utils/saveScrape");
+const processScrapes = require("./utils/processScrapes");
 const saveAds = require("./utils/saveAds");
 const scrapePage = require("./utils/scrapePage");
 
@@ -20,7 +20,7 @@ const clickAllModals = require("./utils/clickAllModals");
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     devtools: false
   });
@@ -30,8 +30,7 @@ const clickAllModals = require("./utils/clickAllModals");
   just passing a single value for testing
   - Corey
   */
-  //const keywords = await getKeywords();
-  const keywords = ["tigard", "yes on 46", "sherwood"];
+  const keywords = await getKeywords();
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
   console.log(`Scrape Session Hash: ${hash}`);
@@ -60,6 +59,7 @@ const clickAllModals = require("./utils/clickAllModals");
   // Experimental method of intercepting Ajax call to get data directly
   // Triggers on every ajax response, filters by relevant results, saves to database
   await page.setRequestInterception(true);
+  const saveScrape = saveScrapeClosure(0);
   page.on("response", response => {
     saveScrape(response, { currentKeyword, hash });
   });
