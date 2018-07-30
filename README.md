@@ -61,7 +61,9 @@ base branch to make changes from; once changes are done on your branch, merge he
 
 # Branch Naming
 feature/your-feature-being-added
+
 nameOfFile/thing-being-worked on   i.e. index/removing-old-functions
+
 deprecated/thing-being-deprecated
 
 
