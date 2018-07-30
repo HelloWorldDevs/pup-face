@@ -25,11 +25,6 @@ const clickAllModals = require("./utils/clickAllModals");
     devtools: false
   });
 
-  /* 
-  getKeywords() commented out for debug, this is how we get data from google sheets
-  just passing a single value for testing
-  - Corey
-  */
   const keywords = await getKeywords();
   const hash = crypto.randomBytes(20).toString("hex");
   const startTime = new Date();
@@ -59,7 +54,7 @@ const clickAllModals = require("./utils/clickAllModals");
   // Experimental method of intercepting Ajax call to get data directly
   // Triggers on every ajax response, filters by relevant results, saves to database
   await page.setRequestInterception(true);
-  const saveScrape = saveScrapeClosure(0);
+  const saveScrape = saveScrapeClosure();
   page.on("response", response => {
     saveScrape(response, { currentKeyword, hash });
   });
@@ -109,7 +104,10 @@ const clickAllModals = require("./utils/clickAllModals");
       .catch(err => errorHandle(err, "index.js page.goto() call"));
 
     // Get result count and print to console. Stop loop if no results are found
-    const resultsText = (await page.content()).match(/[~]?\d+\sresults/i);
+    const resultsText = await page.$eval("._1bv4 > div", el => {
+      return el.textContent;
+    });
+    //const resultsText = (await page.content()).match(/[~]?\d+\sresults/i);
     if (!resultsText) {
       console.log("No results found");
       continue;
@@ -124,14 +122,9 @@ const clickAllModals = require("./utils/clickAllModals");
       );
     }
     await clickAllModals(page, currentKeyword, hash);
-    // await scrapePage(page, currentKeyword, hash);
+
     // save search term to history to prevent duplication
     saveSearchToHistory(currentKeyword, resultsText.toString());
-    //let results = await scrapePage(page, currentKeyword, hash);
-    debugger;
-    //await saveAds(results).catch(err =>
-    //  errorHandle(err, "index.js saveAds() call")
-    //);
   }
   /*
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
