@@ -48,3 +48,21 @@ node process.js -dk YYYY-MM-DD keywords (space separated for first last or 3 par
 node process.js -d YYYY-MM-DD
 
 node process.js -k keywords
+
+# Branches
+
+**Production**
+---------------
+Running on the server, merge here from **develop** then pull on the EC2 instance to deploy changes
+
+**development** 
+---------------
+base branch to make changes from; once changes are done on your branch, merge here to test.  After testing merge to **Production**
+
+# Branch Naming
+feature/your-feature-being-added
+nameOfFile/thing-being-worked on   i.e. index/removing-old-functions
+deprecated/thing-being-deprecated
+
+
+
